@@ -1,0 +1,41 @@
+.background-image {
+  background-image: url('/assets/images/img2.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white; /* Adjust text color for better readability */
+  padding: 20px;
+}
+
+.background-image h3, .background-image p, .background-image ul, .background-image li {
+  margin: 0;
+  padding: 5px 0;
+}
+
+/* Custom CSS */
+
+.header-banner {
+  background-color: #6fa7b3;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.header-banner .container {
+  display: flex;
+  justify-content
+
+.center-button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #003152; /* Prussian blue */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  }
+  
+.center-button:hover {
+  background-color: #002243; /* Darker shade of Prussian blue */
+  }
+  
