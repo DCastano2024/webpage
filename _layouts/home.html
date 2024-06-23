@@ -10,12 +10,11 @@ layout: default
   <!-- Start of new image and text section -->
   <div class="content-section">
     <div class="image-container">
-      <img src="/assets/images/david.jpg" alt="Internal medicine care in Medellín">
+      <img src="{{ site.baseurl }}/assets/images/david.jpg" alt="Internal medicine care in Medellín">
     </div>
     <div class="text-container">
-      <h1>We excel at internal medicine for english speakrs</h1>
-      <p>Schedule a datw con Dr. Castaño and see by yourself.</p>
-      <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
+      <h1>We excel at internal medicine for English speakers</h1>
+      <p>Schedule a date with Dr. Castaño and see for yourself.</p>
     </div>
   </div>
   <!-- End of new image and text section -->
@@ -41,6 +40,6 @@ layout: default
       {%- endfor -%}
     </ul>
 
-    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+    <p class="rss-subscribe">subscribe <a href="{{ site.baseurl }}/feed.xml" rel="nofollow">via RSS</a></p>
   {%- endif -%}
 </div>
