@@ -26,8 +26,8 @@ description: >- # this means to ignore newlines until "baseurl:"
   I am an internist specialist in adult and elderly medicine services in Medellín. I am a native English speaker with extensive experience in managing adult and elderly patient pathologies. My services include:
  
 
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/webpage" # the subpath of your site, e.g. /blog
+url: "https://dcastano2024.github.io/" 
 twitter_username: Drcastano
 github_username:  DCastano2024
 markdown: kramdown
