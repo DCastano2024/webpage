@@ -2,7 +2,7 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-title: Adult and elder healthcare for english speakers in Medellín
+title: Adult healthcare for english speakers in Medellín
 layout: home
 background: '/images/img2.jpg'
 
