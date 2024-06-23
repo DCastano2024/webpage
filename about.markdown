@@ -2,7 +2,7 @@
 layout: page
 title: About
 permalink: /about/
-background: '/images/img2.jpg'
+background: '{{ site.baseurl }}/images/img2.jpg'  # Adjusted for correct path handling
 ---
 
 ### Dr. David Castaño
