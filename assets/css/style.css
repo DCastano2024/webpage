@@ -1,123 +1,60 @@
 body {
-    font-family: Helvetica, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-  }
-  
-  header.site-header {
-    background-color: #468284; /* Blue background color * #003152 /
-    color: #ffffff; /* White text color */
-    padding: 1rem 0; /* Padding for the header */
-    text-align: center; /* Center align the text */
-  }
-  
-  header.site-header .wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  header.site-header .site-title {
-    margin: 0;
-    font-size: 2rem;
-    color: #ffffff;
-    text-decoration: none;
-  }
-  
-  header.site-header .site-nav {
-    margin-top: 1rem;
-  }
-  
-  header.site-header .site-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-  }
-  
-  header.site-header .site-nav ul li {
-    display: inline;
-    margin-right: 15px;
-  }
-  
-  header.site-header .site-nav ul li a {
-    color: #ffffff;
-    text-decoration: none;
-  }
-  
-  main {
-    padding: 1em;
-  }
-  
-  footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1em 0;
-  }
-  
-  .header-banner {
-    background-color: #4682b4; /* Light steel blue background */
-    padding: 20px 0;
-  }
-  
-  .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-  
-  .contact-info, .logo, .secondary-contact {
-    flex: 1;
-    margin: 0 20px; /* Adjust spacing as needed */
-  }
-  
-  .phone-number {
-    margin-bottom: 20px; /* Space between the phone number and doctor name */
-  }
-  
-  .doctor-name {
-    margin-top: 40px; /* Space between phone number and doctor name */
-  }
-  
-  .specialty {
-    margin-bottom: 20px; /* Space between specialty and secondary location */
-  }
-  
-  .secondary-location {
-    margin-top: 20px; /* Space between specialty and secondary location */
-  }
-  
-  .header-banner a {
-    color: white;
-    text-decoration: none;
-  }
-  
-  .header-banner a:hover {
-    text-decoration: underline;
-  }
-  
-  .header-banner p, .header-banner h1 {
-    color: white;
-    margin: 5px 0;
-  }
+  font-family: Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
 
-  .center-button {
-    display: block;
-    margin: 20px auto;
-    padding: 10px 20px;
-    background-color: #003152; /* Prussian blue */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    }
-    
-  .center-button:hover {
-    background-color: #002243; /* Darker shade of Prussian blue */
-    }
-    
-  
+header.site-header {
+  background-color: #468284; /* Blue background color */
+  color: #ffffff; /* White text color */
+  padding: 1rem 0; /* Padding for the header */
+  text-align: center; /* Center align the text */
+}
+
+header.site-header .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header.site-header .site-title {
+  margin: 0;
+  font-size: 2rem;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+header.site-header .site-nav {
+  margin-top: 1rem;
+}
+
+header.site-header .site-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+header.site-header .site-nav ul li {
+  display: inline;
+  margin-right: 15px;
+}
+
+header.site-header .site-nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+main {
+  padding: 1em;
+}
+
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1em 0;
+}
+
+/* Other necessary styles here */

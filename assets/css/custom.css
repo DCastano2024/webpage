@@ -1,77 +1,19 @@
-.background-image {
-  background-image: url('/assets/images/img2.jpg');
-  background-size: cover;
-  background-position: center;
-  color: white; /* Adjust text color for better readability */
-  padding: 20px;
+/* Ensure links in header have proper z-index and position */
+.header a, .nav-link { 
+  color: white; /* Set text color to white */
+  z-index: 2; /* Ensure the text appears above the overlay */
+  position: relative;
 }
 
-.background-image h3, .background-image p, .background-image ul, .background-image li {
-  margin: 0;
-  padding: 5px 0;
-}
-
-/* Custom CSS */
-
-.header-banner {
-  background-color: #6fa7b3;
-  padding: 10px 0;
-  text-align: center;
-}
-
-.header-banner .container {
+/* Social icons adjustments */
+.social-icons {
   display: flex;
-  justify-content
-
-.center-button {
-  display: block;
-  margin: 20px auto;
-  padding: 10px 20px;
-  background-color: #003152; /* Prussian blue */
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  }
-  
-/* Custom styles for home layout */
-.content-section {
-  display: flex;
-  align-items: center;
   justify-content: center;
-  margin: 20px 0;
-}
-
-.image-container {
-  flex: 1;
-  max-width: 50%;
-}
-
-.text-container {
-  flex: 1;
-  max-width: 50%;
-  padding: 0 20px;
-}
-
-img {
-  width: 100%;
-  height: auto;
-}
-
-@media (max-width: 768px) {
-  .content-section {
-    flex-direction: column;
-  }
-
-  .image-container,
-  .text-container {
-    max-width: 100%;
-  }
+  margin-top: 10px;
 }
 
 .social-icons a {
-  margin-right: 10px; /* Space between icons */
+  margin: 0 15px; /* Space between icons */
   display: inline-block;
   vertical-align: middle;
 }
@@ -83,6 +25,60 @@ img {
   width: 30px; /* Adjust size as needed */
 }
 
+/* Header adjustments */
+.header {
+  background-image: url('{{ site.baseurl }}/path/to/your/image.jpg'); /* Path to your background image */
+  background-size: cover; /* Cover the entire area of the header */
+  background-position: center; /* Center the background image */
+  position: relative; /* Needed for the overlay effect */
+}
 
+/* Adjusting the font size of the site title */
+.site-title {
+  font-size: 2.5rem; /* Adjust this value to your desired font size */
+}
 
-  
+/* Optionally, add responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .site-title {
+    font-size: 2rem; /* Adjust this value for smaller screens */
+  }
+}
+
+/* Custom styles for home layout */
+.content-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.image-container {
+  flex: 1;
+  max-width: 50%;
+  text-align: center;
+}
+
+.text-container {
+  flex: 1;
+  max-width: 50%;
+  padding-left: 20px; /* Add some space between image and text */
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .content-section {
+    flex-direction: column;
+  }
+
+  .image-container,
+  .text-container {
+    max-width: 100%;
+    padding-left: 0; /* Remove padding on small screens */
+  }
+}

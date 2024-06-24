@@ -20,4 +20,5 @@ Providing top-notch medical care for your health and well-being. I am an interni
   - Assessment of drug interactions
 
   - Study and treatment of travelers' fever and other clinical scenarios for tourists and residents in Medellín, Colombia.
+  
 ---

@@ -1,8 +1,8 @@
-<header class="site-header" role="banner">
+<header class="site-header" role="banner" style="background-image: url('{{ site.baseurl }}/assets/images/header-image.jpg'); background-size: cover; background-position: center; position: relative;">
   <div class="wrapper header-wrapper">
     {%- assign default_paths = site.pages | map: "path" -%}
     {%- assign page_paths = site.header_pages | default: default_paths -%}
-    <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+    <a class="site-title" rel="author" href="{{ site.baseurl }}/" style="color: white; z-index: 2; position: relative;">{{ site.title | escape }}</a>
 
     {%- if page_paths -%}
       <nav class="site-nav">
@@ -19,18 +19,15 @@
           {%- for path in page_paths -%}
             {%- assign my_page = site.pages | where: "path", path | first -%}
             {%- if my_page.title -%}
-            <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+            <a class="page-link" href="{{ my_page.url | relative_url }}" style="color: white; display: block; text-decoration: none; padding: 8px 15px;">{{ my_page.title | escape }}</a>
             {%- endif -%}
           {%- endfor -%}
         </div>
       </nav>
     {%- endif -%}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <a href="https://www.instagram.com/dr.davidcastano?igsh=N2oxbW9hMmEwdTFo&utm_source=qr" target="_blank" title="Follow us on Instagram">
+    <a href="https://www.instagram.com/dr.davidcastano?igsh=N2oxbW9hMmEwdTFo&utm_source=qr" target="_blank" title="Follow us on Instagram" style="color: white; z-index: 2; position: relative; display: inline-block; margin-left: 10px;">
     <i class="fab fa-instagram" style="font-size: 30px;"></i>
     </a>
   </div>
 </header>
-
-
-
