@@ -19,7 +19,7 @@
           {%- for path in page_paths -%}
             {%- assign my_page = site.pages | where: "path", path | first -%}
             {%- if my_page.title -%}
-            <a class="page-link" href="{{ my_page.url | relative_url }}" style="color: white; display: block; text-decoration: none; padding: 8px 15px;">{{ my_page.title | escape }}</a>
+            <a class="page-link" href="{{ my_page.url | relative_url }}" style="color: white; display: block; text-decoration: none; padding: 8px 15px; z-index: 2; position: relative;">{{ my_page.title | escape }}</a>
             {%- endif -%}
           {%- endfor -%}
         </div>
@@ -30,4 +30,5 @@
     <i class="fab fa-instagram" style="font-size: 30px;"></i>
     </a>
   </div>
+  <div style="content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
 </header>
