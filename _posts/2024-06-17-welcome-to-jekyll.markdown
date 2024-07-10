@@ -6,14 +6,10 @@ categories: First post
 ---
 
 <div class="background-image" style="color: black; line-height: 1.5;">
-  <h2>Book a Medical House Call</h2>
-  <ul class="list-item-spacing">
-    <li>$50 Medical House-call Fee</li>
-  </ul>
 
   <h2>Book a medical appointment at my office</h2>
   <ul class="list-item-spacing">
-    <li>$40 Office appointment</li>
+    <li>Contact our whatsapp for office appointment and pricing</li>
   </ul>
 </div>
 
@@ -21,28 +17,23 @@ categories: First post
 
 ### Address:
 
-<div class="line-height-1-8">
+<div class="line-height-12-9">
 Ciudad del Río
 
-17 East 102nd Street
+19A street # 44-25
 
-20th floor
+Office 17-15, Building: Salud y Servicios.
+
 Medellín
 
-Phone: +xxxxxxx
+Phone: +316 532 1717
 
-Fax: 222-222-222 
 </div>
 
 ### Office Hours:
 
 <div class="line-height-1-8">
   <ul class="list-item-spacing">
-    <li>Monday 8:30am - 7:00pm</li>
-    <li>Tuesday 8:30am - 7:00pm</li>
-    <li>Wednesday 8:30am - 7:00pm</li>
-    <li>Thursday 8:30am - 7:00pm</li>
-    <li>Friday 8:30am - 4:00pm</li>
-    <li>Saturday 9:00am - 1:30pm</li>
+    <li>Schedule via whatsapp</li>
   </ul>
 </div>

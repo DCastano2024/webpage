@@ -11,7 +11,7 @@ categories: First post
       <p>SCHEDULE AN APPOINTMENT</p>
       <p><a href="#">Ciudad del Río Medellín</a></p>
       <p><a href="#">Set appointment</a></p>
-      <p class="phone-number"><a href="tel:+57 304 3807052">+57 304 3807052</a></p>
+      <p class="phone-number"><a href="tel:+57 316 532 1717">+57 316 532 1717</a></p>
     </div>
     <div class="logo">
       <h1 class="doctor-name">David Castaño, M.D.</h1>
