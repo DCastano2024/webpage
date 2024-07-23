@@ -113,3 +113,64 @@ img {
     padding-left: 0; /* Remove padding on small screens */
   }
 }
+
+/* Services section styling */
+.services {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.services h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.services p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.services-panel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.service-item {
+  background: #f0f0f0;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  flex: 0 1 21%; /* Adjust this value to control the number of items per row */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.service-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.service-item p {
+  font-size: 1rem;
+}
+
+/* Service item icon styling */
+.service-item i {
+  font-size: 2rem; /* Adjust size as needed */
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .service-item {
+    flex: 0 1 45%; /* Adjust this value for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .service-item {
+    flex: 0 1 90%; /* Adjust this value for the smallest screens */
+  }
+}

@@ -14,12 +14,61 @@ layout: default
     </div>
     <div class="text-container">
       <h1>We excel at internal medicine for English speakers</h1>
-      <p>Schedule a date with Dr. Castaño and see by yourself.</p>
+      <p>Schedule a date with Dr. Castaño and see for yourself.</p>
     </div>
   </div>
   <!-- End of new image and text section -->
 
   {{ content }}
+
+  <!-- Services Section -->
+  <section class="services">
+    <h2>Our Services</h2>
+    <p>Discover the internal medicine services we offer:</p>
+    <div class="services-panel">
+      <div class="service-item" style="background-color: #f0f8ff;"> <!-- Light Blue -->
+        <i class="fas fa-heartbeat"></i>
+        <h3>Hypertension</h3>
+        <p>Hypertension control and management.</p>
+      </div>
+      <div class="service-item" style="background-color: #ffe4e1;"> <!-- Light Red -->
+        <i class="fas fa-lungs"></i>
+        <h3>COPD</h3>
+        <p>Treatment of Chronic obstructive pulmonary disease.</p>
+      </div>
+      <div class="service-item" style="background-color: #fafad2;"> <!-- Light Yellow -->
+        <i class="fas fa-syringe"></i>
+        <h3>Diabetes Mellitus</h3>
+        <p>Type 2 Diabetes treatment and control.</p>
+      </div>
+      <div class="service-item" style="background-color: #e0ffff;"> <!-- Light Cyan -->
+        <i class="fas fa-kidneys"></i>
+        <h3>CKD</h3>
+        <p>Control and follow up for Chronic Kidney Disease.</p>
+      </div>
+      <div class="service-item" style="background-color: #f5f5dc;"> <!-- Beige -->
+        <i class="fas fa-band-aid"></i>
+        <h3>Chronic Pain</h3>
+        <p>Chronic pain treatment.</p>
+      </div>
+      <div class="service-item" style="background-color: #fffacd;"> <!-- Light Goldenrod Yellow -->
+        <i class="fas fa-globe"></i>
+        <h3>Traveler's Fever</h3>
+        <p>Evaluation and follow up for travelers fever (Tropical Infectious diseases).</p>
+      </div>
+      <div class="service-item" style="background-color: #e6e6fa;"> <!-- Lavender -->
+        <i class="fas fa-heart"></i>
+        <h3>Cardiovascular Risk Assessment</h3>
+        <p>Cardiovascular risk follow up.</p>
+      </div>
+      <div class="service-item" style="background-color: #f0fff0;"> <!-- Honeydew -->
+        <i class="fas fa-stomach"></i>
+        <h3>Gastrointestinal Disorders</h3>
+        <p>Gastrointestinal and hepatic conditions and disorders.</p>
+      </div>
+    </div>
+  </section>
+  <!-- End of Services Section -->
 
   {%- if site.posts.size > 0 -%}
     <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
