@@ -144,6 +144,11 @@ img {
   flex: 0 1 21%; /* Adjust this value to control the number of items per row */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   position: relative;
+  transition: transform 0.3s ease; /* Add transition for smooth scaling */
+}
+
+.service-item:hover {
+  transform: scale(1.05); /* Slightly increase size on hover */
 }
 
 .service-item h3 {
