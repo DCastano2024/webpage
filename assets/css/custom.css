@@ -179,3 +179,22 @@ img {
     flex: 0 1 90%; /* Adjust this value for the smallest screens */
   }
 }
+
+
+.whatsapp-contact a {
+  display: block;
+  text-align: center;
+  margin: 20px 0;
+  font-size: 18px;
+  color: #25D366;
+  text-decoration: none;
+}
+
+.whatsapp-contact a:hover {
+  color: #128C7E;
+}
+
+.whatsapp-contact i {
+  font-size: 30px;
+  vertical-align: middle;
+}
