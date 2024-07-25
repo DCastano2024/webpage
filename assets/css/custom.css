@@ -1,6 +1,12 @@
 /* Import the Playfair Display font */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
 
+/* Apply the font to the entire body */
+body {
+  font-family: 'Playfair Display', serif;
+  line-height: 1.6;
+}
+
 /* Ensure links in header have proper z-index and position */
 .header a, .nav-link { 
   color: white; /* Set text color to white */
