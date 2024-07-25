@@ -1,3 +1,6 @@
+/* Import the Playfair Display font */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
 /* Ensure links in header have proper z-index and position */
 .header a, .nav-link { 
   color: white; /* Set text color to white */
@@ -180,6 +183,7 @@ img {
   }
 }
 
+/* WhatsApp Contact Section */
 .whatsapp-contact a {
   display: block;
   text-align: center;
@@ -202,7 +206,7 @@ img {
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Playfair Display', serif;
   line-height: 1.6;
 }
 
@@ -277,25 +281,6 @@ body {
     z-index: 2;
     position: relative;
   }
-}
-
-/* WhatsApp Contact Section */
-.whatsapp-contact a {
-  display: block;
-  text-align: center;
-  margin: 20px 0;
-  font-size: 18px;
-  color: #25D366;
-  text-decoration: none;
-}
-
-.whatsapp-contact a:hover {
-  color: #128C7E;
-}
-
-.whatsapp-contact i {
-  font-size: 30px;
-  vertical-align: middle;
 }
 
 /* Services Section */
