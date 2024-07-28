@@ -1,17 +1,12 @@
-/* Import the Playfair Display font */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
-
-/* Apply the font to the entire body */
-body {
-  font-family: 'Playfair Display', serif;
-  line-height: 1.6;
-}
+/* Import the Oswald font */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap');
 
 /* Ensure links in header have proper z-index and position */
 .header a, .nav-link { 
   color: white; /* Set text color to white */
   z-index: 2; /* Ensure the text appears above the overlay */
   position: relative;
+  font-family: 'Oswald', sans-serif; /* Apply Oswald font */
 }
 
 /* Social icons adjustments */
@@ -40,6 +35,7 @@ body {
   background-size: cover; /* Cover the entire area of the header */
   background-position: center; /* Center the background image */
   position: relative; /* Needed for the overlay effect */
+  font-family: 'Oswald', sans-serif; /* Apply Oswald font */
 }
 
 /* Adding an overlay */
@@ -60,6 +56,7 @@ body {
   background-position: center;
   position: relative;
   z-index: 0; /* Ensure it stays below text */
+  font-family: 'Oswald', sans-serif; /* Apply Oswald font */
 }
 
 .site-header::after {
@@ -76,12 +73,14 @@ body {
 /* Adjusting the font size of the site title */
 .site-title {
   font-size: 2.5rem; /* Adjust this value to your desired font size */
+  font-family: 'Oswald', sans-serif; /* Apply Oswald font */
 }
 
 /* Optionally, add responsive adjustments for smaller screens */
 @media (max-width: 768px) {
   .site-title {
     font-size: 2rem; /* Adjust this value for smaller screens */
+    font-family: 'Oswald', sans-serif; /* Apply Oswald font */
   }
 }
 
@@ -91,6 +90,7 @@ body {
   align-items: center;
   justify-content: space-between;
   margin: 20px 0;
+  font-family: 'Oswald', sans-serif; /* Apply Oswald font */
 }
 
 .image-container {
@@ -127,16 +127,19 @@ img {
 .services {
   text-align: center;
   margin: 40px 0;
+  font-family: 'Oswald', sans-serif; /* Apply Oswald font */
 }
 
 .services h2 {
   font-size: 2.5rem;
   margin-bottom: 10px;
+  font-family: 'Oswald', sans-serif; /* Apply Oswald font */
 }
 
 .services p {
   font-size: 1.2rem;
   margin-bottom: 30px;
+  font-family: 'Oswald', sans-serif; /* Apply Oswald font */
 }
 
 .services-panel {
@@ -154,6 +157,7 @@ img {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   position: relative;
   transition: transform 0.3s ease; /* Add transition for smooth scaling */
+  font-family: 'Oswald', sans-serif; /* Apply Oswald font */
 }
 
 .service-item:hover {
@@ -163,10 +167,12 @@ img {
 .service-item h3 {
   font-size: 1.5rem;
   margin-bottom: 10px;
+  font-family: 'Oswald', sans-serif; /* Apply Oswald font */
 }
 
 .service-item p {
   font-size: 1rem;
+  font-family: 'Oswald', sans-serif; /* Apply Oswald font */
 }
 
 /* Service item icon styling */
@@ -197,6 +203,7 @@ img {
   font-size: 18px;
   color: #25D366;
   text-decoration: none;
+  font-family: 'Oswald', sans-serif; /* Apply Oswald font */
 }
 
 .whatsapp-contact a:hover {
@@ -212,7 +219,7 @@ img {
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Oswald', sans-serif; /* Apply Oswald font */
   line-height: 1.6;
 }
 
