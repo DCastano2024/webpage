@@ -1,4 +1,5 @@
 /* Import the Oswald font */
+@use "sass:math";
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap');
 
 /* Ensure links in header have proper z-index and position */
@@ -350,6 +351,7 @@ body {
   text-align: center;
 }
 
+
 .text-container {
   flex: 1;
   max-width: 50%;
@@ -372,3 +374,180 @@ img {
     padding-left: 0;
   }
 }
+/* Top Bar Style */
+.header-top {
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  padding: 10px 20px; /* Padding for breathing space */
+  display: flex; /* Aligns the social icons horizontally */
+  justify-content: flex-end; /* Aligns the icons to the right */
+  z-index: 3; /* Ensures it is above other content */
+  position: relative; /* Required for z-index */
+}
+
+
+/* Ensuring header links do not overlap icons */
+.header-links {
+  position: relative;
+  z-index: 4; /* Ensures links are below icons but above other content */
+  display: flex;
+  align-items: center; /* Aligns links vertically */
+  gap: 20px; /* Spacing between each link */
+}
+
+.header-link {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.header-link:hover {
+  color: #ccc; /* Hover effect for better usability */
+}
+
+/* Specific adjustments for mobile views */
+@media (max-width: 768px) {
+  .header-top {
+      flex-direction: column; /* Stacks links and icons vertically on smaller screens */
+      align-items: center; /* Center aligns items */
+  }
+
+  .social-icons, .header-links {
+      margin-top: 10px; /* Adds top margin for spacing */
+  }
+}
+/* Import the Oswald font */
+@use "sass:math";
+
+/* Ensure links in header have proper z-index and position */
+.header a, .nav-link {
+  color: white; /* Set text color to white */
+  z-index: 2; /* Ensure the text appears above the overlay */
+  position: relative;
+  font-family: 'Oswald', sans-serif; /* Apply Oswald font */
+}
+
+/* Social icons adjustments */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  margin: 0 15px; /* Space between icons */
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.social-icons img, .social-icons i {
+  display: inline-block;
+  vertical-align: middle;
+  height: 30px; /* Adjust size as needed */
+  width: 30px; /* Adjust size as needed */
+}
+
+/* Remove the dark overlay from the header */
+.header::after, .site-header::after {
+  content: none;
+}
+
+/* Header adjustments */
+.header {
+  background-image: url('{{ site.baseurl }}/path/to/your/image.jpg'); /* Path to your background image */
+  background-size: cover; /* Cover the entire area of the header */
+  background-position: center; /* Center the background image */
+  position: relative; /* Needed for the positioning context */
+  font-family: 'Oswald', sans-serif; /* Apply Oswald font */
+}
+
+.site-header {
+  background-image: url('{{ site.baseurl }}/path/to/your/header-image.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  font-family: 'Oswald', sans-serif; /* Apply Oswald font */
+}
+
+/* Adjusting the font size of the site title */
+.site-title {
+  font-size: 2.5rem; /* Adjust this value to your desired font size */
+  font-family: 'Oswald', sans-serif; /* Apply Oswald font */
+}
+
+@media (max-width: 768px) {
+  .site-title {
+    font-size: 2rem; /* Adjust this value for smaller screens */
+  }
+}
+
+/* Update your social icons styling for better visibility */
+.social-icons a {
+  font-size: 30px; /* Icon size */
+  text-decoration: none; /* No underline */
+}
+
+
+/* Ensure social icons are visible and not covered by any overlays */
+.social-icons {
+  position: relative;
+  z-index: 100; /* Higher z-index to ensure visibility */
+}
+.social-icons i {
+  font-family: 'Font Awesome 6 Free', 'Font Awesome 6 Brands' !important;
+  font-weight: 900 !important;
+}
+
+.site-header::after, .header::after {
+  background: rgba(255, 255, 255, 0.5); /* Change to a semi-transparent white or another color */
+  z-index: 1; /* Ensure this is below the icons' z-index */
+}
+.site-header a, .site-nav a {
+  color: #f9f9f9; /* Almost white, adjust the shade as needed */
+  text-decoration: none; /* Removes underline */
+}
+
+.site-header a:hover, .site-nav a:hover {
+  color: #ccc; /* Light gray for hover effect */
+}
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute; /* Continue using absolute positioning */
+  left: 20px; /* Align to the left side of the header */
+  top: 10px; /* Keep at the top of the header */
+  z-index: 5;
+}
+.header-wrapper {
+  text-align: center; /* Centers the title and the icons */
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center; /* Center align the icons horizontally */
+  margin-top: 10px; /* Add some space between title and icons */
+}
+
+.social-icons a {
+  color: inherit; /* Inherits color from parent, can be overridden for individual icons */
+  margin: 0 10px; /* Space between icons */
+}
+
+.social-icons a i {
+  font-size: 24px; /* Icon size */
+}
+
+/* Color for each icon */
+.social-icons a[title="WhatsApp"] i { color: #53b677; }
+.social-icons a[title="Instagram"] i { color: #db499b; }
+.social-icons a[title="Email"] i { color: #da3e30; }
+
+
+
+
+
+
+
+
+

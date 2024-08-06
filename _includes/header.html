@@ -1,34 +1,32 @@
 <header class="site-header" role="banner" style="background-image: url('{{ site.baseurl }}/assets/images/header-image.jpg'); background-size: cover; background-position: center; position: relative;">
+  <div class="header-top">
+    <div class="header-links">
+      <a href="{{ site.baseurl }}/services/2024/01/01/services.html" class="header-link">Services</a>
+      <a href="{{ site.baseurl }}/marketing/2024/01/01/summary_of_doctor_castaño_experience.html" class="header-link">Dr. Castaño Experience</a>
+      <a href="{{ site.baseurl }}/first/post/2024/01/01/welcome-to-jekyll.html" class="header-link">Book an Appointment</a>
+    </div>
+  </div>
   <div class="wrapper header-wrapper">
-    {%- assign default_paths = site.pages | map: "path" -%}
-    {%- assign page_paths = site.header_pages | default: default_paths -%}
-    <a class="site-title" rel="author" href="{{ site.baseurl }}/" style="color: white; z-index: 2; position: relative;">{{ site.title | escape }}</a>
-
-    {%- if page_paths -%}
-      <nav class="site-nav">
-        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
-        <label for="nav-trigger">
-          <span class="menu-icon">
-            <svg viewBox="0 0 18 15" width="28px" height="25px">
-              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
-            </svg>
-          </span>
-        </label>
-
-        <div class="trigger">
-          {%- for path in page_paths -%}
-            {%- assign my_page = site.pages | where: "path", path | first -%}
-            {%- if my_page.title -%}
-            <a class="page-link" href="{{ my_page.url | relative_url }}" style="color: white; display: block; text-decoration: none; padding: 8px 15px; z-index: 2; position: relative;">{{ my_page.title | escape }}</a>
-            {%- endif -%}
-          {%- endfor -%}
-        </div>
-      </nav>
-    {%- endif -%}
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <a href="https://www.instagram.com/dr.davidcastano?igsh=N2oxbW9hMmEwdTFo&utm_source=qr" target="_blank" title="Follow us on Instagram" style="color: white; z-index: 2; position: relative; display: inline-block; margin-left: 10px;">
-    <i class="fab fa-instagram" style="font-size: 30px;"></i>
-    </a>
+    <a class="site-title" rel="author" href="{{ site.baseurl }}/">{{ site.title | escape }}</a>
+    <!-- Social Icons directly below site title -->
+    <div class="social-icons">
+      <a href="https://wa.me/573043807052" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://www.instagram.com/dr.davidcastano" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="mailto:dcastanosorio87@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+    </div>
+    <nav class="site-nav">
+      <input type="checkbox" id="nav-trigger" class="nav-trigger">
+      <label for="nav-trigger" class="menu-icon">
+        <svg viewBox="0 0 18 15" width="28px" height="25px">
+          <!-- SVG content here -->
+        </svg>
+      </label>
+      <div class="trigger">
+        <a class="page-link" href="{{ site.baseurl }}/posts/summary-of-dr-castano-experience.html">Dr. Castaño</a>
+        <a class="page-link" href="{{ site.baseurl }}/posts/services.html">Services</a>
+        <a class="page-link" href="#services-panel">More Services</a>
+      </div>
+    </nav>
   </div>
   <div style="content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
 </header>
