@@ -6,7 +6,7 @@
 /* Ensure links in header have proper z-index and position */
 .header a, .nav-link { 
   color: white; /* Set text color to white */
-  z-index: 2; /* Ensure the text appears above the overlay */
+  z-index: 2; /* Ensure the text appears above t''he overlay */
   position: relative;
   font-family: 'Oswald', sans-serif; /* Apply Oswald font */
 }
@@ -541,8 +541,58 @@ img {
 
 /* Color for each icon */
 .social-icons a[title="WhatsApp"] i { color: #53b677; }
-.social-icons a[title="Instagram"] i { color: #db499b; }
+.social-icons a[title="Instagram"] i { color: #de65aa; }
 .social-icons a[title="Email"] i { color: #da3e30; }
+
+/* Other existing styles in custom.css */
+
+/* General adjustments for list items within content sections */
+.content-section ul, .background-image ul {
+  margin: 20px 0; /* Space between the list items and surrounding content */
+  padding-left: 20px; /* Space between bullets and text */
+  list-style-type: disc; /* Ensure the bullet points are visible */
+}
+
+.content-section ul li, .background-image ul li {
+  margin-bottom: 10px; /* Space between individual list items */
+  line-height: 1.5; /* Line height within list items */
+}
+
+/* Center the button */
+.intro button {
+  display: block;
+  margin: 20px auto; /* Center the button horizontally */
+  padding: 10px 20px;
+  background-color: #333; /* Button background color */
+  color: #fff; /* Button text color */
+  border: none;
+  cursor: pointer;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.intro button:hover {
+  background-color: #555; /* Darken the button color on hover */
+}
+
+/* Adjust line spacing for headers */
+h2 {
+  margin-top: 30px; /* Add space before headers */
+  margin-bottom: 15px; /* Add space after headers */
+  line-height: 1.4; /* Adjust line height for readability */
+}
+
+/* Line height and spacing for the background-image div */
+.background-image {
+  padding: 20px; /* Space inside the div */
+  line-height: 1.6; /* Adjust line height */
+}
+
+.background-image h2 {
+  margin-top: 30px; /* Space above headers */
+  margin-bottom: 15px; /* Space below headers */
+}
 
 
 
