@@ -1,206 +1,31 @@
 ---
 layout: default
 title: "Home"
-lang: en # Make sure to change this to 'es' for the Spanish version
+lang: en # Change to 'es' for Spanish version
 ---
 
 <div class="home">
   <!-- Title Section -->
-  {% if page.lang == 'es' %}
-    <h1 class="page-heading">Inicio</h1>
-  {% else %}
-    <h1 class="page-heading">Home</h1>
-  {% endif %}
+  <h1 class="page-heading">{% if page.lang == 'es' %}Inicio{% else %}Home{% endif %}</h1>
 
   <!-- Image and Introduction Text Section -->
   <div class="content-section">
     <div class="image-container">
-      {% if page.lang == 'es' %}
-        <img src="{{ site.baseurl }}/assets/images/david.jpg" alt="Cuidado de medicina interna en Medellín" width="350" height="600">
-      {% else %}
-        <img src="{{ site.baseurl }}/assets/images/david.jpg" alt="Internal medicine care in Medellín" width="350" height="600">
-      {% endif %}
+      <img src="{{ site.baseurl }}/assets/images/david.jpg" alt="{% if page.lang == 'es' %}Cuidado de medicina interna en Medellín{% else %}Internal medicine care in Medellín{% endif %}" width="350" height="600">
     </div>
     <div class="text-container">
-      {% if page.lang == 'es' %}
-        <h1>Nos especializamos en medicina interna para hispanohablantes</h1>
-        <p>Programe una cita con el Dr. Castaño y compruébelo usted mismo.</p>
-        <p>Tengo 13 años de experiencia, incluidos 8 años en medicina interna. He trabajado en hospitales, departamentos de emergencia y atención ambulatoria. Mi enfoque holístico asegura un cuidado personalizado y compasivo adaptado a las necesidades de cada paciente. Estoy comprometido con la salud y el bienestar a largo plazo a través de la educación del paciente y la atención integral.</p>
-      {% else %}
-        <h1>We excel at internal medicine for English speakers</h1>
-        <p>Schedule an appointment with Dr. Castaño and see for yourself.</p>
-        <p>I have 13 years of experience, including 8 years in internal medicine. I have worked in hospital settings, emergency departments, and office appointments. My holistic approach ensures personalized, compassionate care tailored to each patient's needs. I am committed to long-term health and wellness through patient education and comprehensive care.</p>
-      {% endif %}
+      <h1>{% if page.lang == 'es' %}Nos especializamos en medicina interna para hispanohablantes{% else %}We excel at internal medicine for English speakers{% endif %}</h1>
+      <p>{% if page.lang == 'es' %}Programe una cita con el Dr. Castaño y compruébelo usted mismo.{% else %}Schedule an appointment with Dr. Castaño and see for yourself.{% endif %}</p>
+      <p>{% if page.lang == 'es' %}Tengo 13 años de experiencia, incluidos 8 años en medicina interna. He trabajado en hospitales, departamentos de emergencia y atención ambulatoria. Mi enfoque holístico asegura un cuidado personalizado y compasivo adaptado a las necesidades de cada paciente. Estoy comprometido con la salud y el bienestar a largo plazo a través de la educación del paciente y la atención integral.{% else %}I have 13 years of experience, including 8 years in internal medicine. I have worked in hospital settings, emergency departments, and ambulatory care. My holistic approach ensures personalized, compassionate care tailored to each patient's needs. I am committed to long-term health and wellness through patient education and comprehensive care.{% endif %}</p>
     </div>
   </div>
 
   <!-- WhatsApp Contact Section -->
-  <section class="whatsapp-contact">
-    {% if page.lang == 'es' %}
-      <a href="https://wa.me/573043807052?text=Contacte con nosotros y programe una cita" target="_blank" style="display: block; text-align: center; margin: 20px 0; font-size: 18px; color: #25D366; text-decoration: none;">
-        <i class="fab fa-whatsapp" style="font-size: 30px; vertical-align: middle;"></i> Contacte con nosotros y programe una cita
-      </a>
-    {% else %}
-      <a href="https://wa.me/573043807052?text=Contact us and set an appointment" target="_blank" style="display: block; text-align: center; margin: 20px 0; font-size: 18px; color: #25D366; text-decoration: none;">
-        <i class="fab fa-whatsapp" style="font-size: 30px; vertical-align: middle;"></i> Contact us and set an appointment
-      </a>
-    {% endif %}
-  </section>
+  {% include whatsapp-contact.html %}
 
   <!-- Services Section -->
-  <section class="services">
-    {% if page.lang == 'es' %}
-      <h2>Nuestros Servicios</h2>
-      <p>Descubra los servicios de medicina interna que ofrecemos:</p>
-    {% else %}
-      <h2>Our Services</h2>
-      <p>Discover the internal medicine services we offer:</p>
-    {% endif %}
-    <div class="services-panel">
-      {% if page.lang == 'es' %}
-        <!-- Spanish Service Items -->
-        <div class="service-item" style="background-color: #f0f8ff;">
-          <i class="fas fa-heartbeat"></i>
-          <h3>Hipertensión</h3>
-          <p>Control y manejo de la hipertensión.</p>
-          <a href="{{ site.baseurl }}/services/2024/01/01/services.html#hypertension">Leer más</a>
-        </div>
-        <div class="service-item" style="background-color: #ffe4e1;">
-          <i class="fas fa-lungs"></i>
-          <h3>EPOC</h3>
-          <p>Tratamiento del EPOC.</p>
-          <a href="{{ site.baseurl }}/services/2024/01/01/services.html#copd">Leer más</a>
-        </div>
-        <div class="service-item" style="background-color: #fafad2;">
-          <i class="fas fa-syringe"></i>
-          <h3>Diabetes Mellitus</h3>
-          <p>Tratamiento y control de la Diabetes tipo 2.</p>
-          <a href="{{ site.baseurl }}/services/2024/01/01/services.html#diabetes">Leer más</a>
-        </div>
-        <div class="service-item" style="background-color: #e0ffff;">
-          <i class="fas fa-notes-medical"></i>
-          <h3>ERC</h3>
-          <p>Control y seguimiento de la Enfermedad Renal Crónica.</p>
-          <a href="{{ site.baseurl }}/services/2024/01/01/services.html#ckd">Leer más</a>
-        </div>
-        <div class="service-item" style="background-color: #f5f5dc;">
-          <i class="fas fa-brain"></i>
-          <h3>Tratamiento de Migraña</h3>
-          <p>Manejo y tratamiento integral de la migraña.</p>
-          <a href="{{ site.baseurl }}/services/2024/01/01/services.html#migraine-treatment">Leer más</a>
-        </div>
-        <div class="service-item" style="background-color: #fffacd;">
-          <i class="fas fa-globe"></i>
-          <h3>Fiebre del Viajero</h3>
-          <p>Evaluación y seguimiento de la fiebre del viajero (Enfermedades infecciosas tropicales).</p>
-          <a href="{{ site.baseurl }}/services/2024/01/01/services.html#travelers-fever">Leer más</a>
-        </div>
-        <div class="service-item" style="background-color: #e6e6fa;">
-          <i class="fas fa-heart"></i>
-          <h3>Evaluación del Riesgo Cardiovascular</h3>
-          <p>Seguimiento del riesgo cardiovascular.</p>
-          <a href="{{ site.baseurl }}/services/2024/01/01/services.html#cardiovascular-risk">Leer más</a>
-        </div>
-        <div class="service-item" style="background-color: #f0fff0;">
-          <i class="fas fa-notes-medical"></i>
-          <h3>Trastornos Gastrointestinales</h3>
-          <p>Condiciones y trastornos gastrointestinales y hepáticos.</p>
-          <a href="{{ site.baseurl }}/services/2024/01/01/services.html#gastrointestinal-disorders">Leer más</a>
-        </div>
-        <div class="service-item" style="background-color: #d0f8ff;">
-          <i class="fas fa-user-md"></i>
-          <h3>Chequeos Preventivos</h3>
-          <p>Chequeos de salud preventivos regulares para mantener su bienestar.</p>
-          <a href="{{ site.baseurl }}/services/2024/01/01/services.html#preventive-checkups">Leer más</a>
-        </div>
-      {% else %}
-        <!-- English Service Items -->
-        <div class="service-item" style="background-color: #f0f8ff;">
-          <i class="fas fa-heartbeat"></i>
-          <h3>Hypertension</h3>
-          <p>Hypertension control and management.</p>
-          <a href="{{ site.baseurl }}/services/2024/01/01/services.html#hypertension">Read more</a>
-        </div>
-        <div class="service-item" style="background-color: #ffe4e1;">
-          <i class="fas fa-lungs"></i>
-          <h3>COPD</h3>
-          <p>Treatment of Chronic obstructive pulmonary disease.</p>
-          <a href="{{ site.baseurl }}/services/2024/01/01/services.html#copd">Read more</a>
-        </div>
-        <div class="service-item" style="background-color: #fafad2;">
-          <i class="fas fa-syringe"></i>
-          <h3>Diabetes Mellitus</h3>
-          <p>Type 2 Diabetes treatment and control.</p>
-          <a href="{{ site.baseurl }}/services/2024/01/01/services.html#diabetes">Read more</a>
-        </div>
-        <div class="service-item" style="background-color: #e0ffff;">
-          <i class="fas fa-notes-medical"></i>
-          <h3>CKD</h3>
-          <p>Control and follow-up for Chronic Kidney Disease.</p>
-          <a href="{{ site.baseurl }}/services/2024/01/01/services.html#ckd">Read more</a>
-        </div>
-        <div class="service-item" style="background-color: #f5f5dc;">
-          <i class="fas fa-brain"></i>
-          <h3>Migraine Treatment</h3>
-          <p>Comprehensive migraine management and treatment.</p>
-          <a href="{{ site.baseurl }}/services/2024/01/01/services.html#migraine-treatment">Read more</a>
-        </div>
-        <div class="service-item" style="background-color: #fffacd;">
-          <i class="fas fa-globe"></i>
-          <h3>Traveler's Fever</h3>
-          <p>Evaluation and follow-up for travelers fever (Tropical Infectious diseases).</p>
-          <a href="{{ site.baseurl }}/services/2024/01/01/services.html#travelers-fever">Read more</a>
-        </div>
-        <div class="service-item" style="background-color: #e6e6fa;">
-          <i class="fas fa-heart"></i>
-          <h3>Cardiovascular Risk Assessment</h3>
-          <p>Cardiovascular risk follow-up.</p>
-          <a href="{{ site.baseurl }}/services/2024/01/01/services.html#cardiovascular-risk">Read more</a>
-        </div>
-        <div class="service-item" style="background-color: #f0fff0;">
-          <i class="fas fa-notes-medical"></i>
-          <h3>Gastrointestinal Disorders</h3>
-          <p>Gastrointestinal and hepatic conditions and disorders.</p>
-          <a href="{{ site.baseurl }}/services/2024/01/01/services.html#gastrointestinal-disorders">Read more</a>
-        </div>
-        <div class="service-item" style="background-color: #d0f8ff;">
-          <i class="fas fa-user-md"></i>
-          <h3>Preventive Checkups</h3>
-          <p>Regular preventive health checkups to maintain your well-being.</p>
-          <a href="{{ site.baseurl }}/services/2024/01/01/services.html#preventive-checkups">Read more</a>
-        </div>
-      {% endif %}
-    </div>
-  </section>
-  <!-- End of Services Section -->
+  {% include service-section.html %}
 
   <!-- Posts Section -->
-  {%- if site.posts.size > 0 -%}
-    {% if page.lang == 'es' %}
-      <h2 class="post-list-heading">Publicaciones</h2>
-    {% else %}
-      <h2 class="post-list-heading">Posts</h2>
-    {% endif %}
-    <ul class="post-list">
-      {%- for post in site.posts -%}
-        <li>
-          {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-          <span class="post-meta">{{ post.date | date: date_format }}</span>
-          <h3>
-            <a class="post-link" href="{{ post.url | relative_url }}">
-              {{ post.title | escape }}
-            </a>
-          </h3>
-          {%- if site.show_excerpts -%}
-            {{ post.excerpt }}
-          {%- endif -%}
-        </li>
-      {%- endfor -%}
-    </ul>
-    {% if page.lang == 'es' %}
-      <p class="rss-subscribe">suscribirse <a href="{{ site.baseurl }}/feed.xml" rel="nofollow">vía RSS</a></p>
-    {% else %}
-      <p class="rss-subscribe">subscribe <a href="{{ site.baseurl }}/feed.xml" rel="nofollow">via RSS</a></p>
-    {% endif %}
-  {%- endif -%}
+  {% include posts-section.html %}
 </div>

@@ -1,0 +1,79 @@
+<section class="services">
+    <h2>{% if page.lang == 'es' %}Nuestros Servicios{% else %}Our Services{% endif %}</h2>
+    <p>{% if page.lang == 'es' %}Descubra los servicios de medicina interna que ofrecemos:{% else %}Discover the internal medicine services we offer:{% endif %}</p>
+    
+    <div class="services-panel">
+      <!-- Hypertension -->
+      <div class="service-item" style="background-color: #f0f8ff;">
+        <i class="fas fa-heartbeat"></i>
+        <h3>{% if page.lang == 'es' %}Hipertensión{% else %}Hypertension{% endif %}</h3>
+        <p>{% if page.lang == 'es' %}Control y manejo de la hipertensión.{% else %}Hypertension control and management.{% endif %}</p>
+        <a href="{{ site.baseurl }}/{{ page.lang }}/services.html#hypertension">{% if page.lang == 'es' %}Leer más{% else %}Read more{% endif %}</a>
+      </div>
+  
+      <!-- COPD -->
+      <div class="service-item" style="background-color: #ffe4e1;">
+        <i class="fas fa-lungs"></i>
+        <h3>{% if page.lang == 'es' %}EPOC (Enfermedad Pulmonar Obstructiva Crónica){% else %}COPD (Chronic Obstructive Pulmonary Disease){% endif %}</h3>
+        <p>{% if page.lang == 'es' %}Tratamiento y control del EPOC.{% else %}Treatment and management of COPD.{% endif %}</p>
+        <a href="{{ site.baseurl }}/{{ page.lang }}/services.html#copd">{% if page.lang == 'es' %}Leer más{% else %}Read more{% endif %}</a>
+      </div>
+  
+      <!-- Diabetes Mellitus -->
+      <div class="service-item" style="background-color: #fafad2;">
+        <i class="fas fa-syringe"></i>
+        <h3>{% if page.lang == 'es' %}Diabetes Mellitus{% else %}Diabetes Mellitus{% endif %}</h3>
+        <p>{% if page.lang == 'es' %}Tratamiento y manejo de la Diabetes Mellitus tipo 2.{% else %}Type 2 Diabetes treatment and management.{% endif %}</p>
+        <a href="{{ site.baseurl }}/{{ page.lang }}/services.html#diabetes">{% if page.lang == 'es' %}Leer más{% else %}Read more{% endif %}</a>
+      </div>
+  
+      <!-- CKD -->
+      <div class="service-item" style="background-color: #e0ffff;">
+        <i class="fas fa-kidney"></i> <!-- Changed icon to fa-kidney -->
+        <h3>{% if page.lang == 'es' %}Enfermedad Renal Crónica (ERC){% else %}Chronic Kidney Disease (CKD){% endif %}</h3>
+        <p>{% if page.lang == 'es' %}Control y seguimiento de la enfermedad renal crónica.{% else %}Control and follow-up for Chronic Kidney Disease.{% endif %}</p>
+        <a href="{{ site.baseurl }}/{{ page.lang }}/services.html#ckd">{% if page.lang == 'es' %}Leer más{% else %}Read more{% endif %}</a>
+      </div>
+  
+      <!-- Migraine -->
+      <div class="service-item" style="background-color: #f5f5dc;">
+        <i class="fas fa-brain"></i>
+        <h3>{% if page.lang == 'es' %}Migraña{% else %}Migraine{% endif %}</h3>
+        <p>{% if page.lang == 'es' %}Tratamiento y manejo de la migraña.{% else %}Migraine treatment and management.{% endif %}</p>
+        <a href="{{ site.baseurl }}/{{ page.lang }}/services.html#migraine">{% if page.lang == 'es' %}Leer más{% else %}Read more{% endif %}</a>
+      </div>
+  
+      <!-- Traveler's Fever -->
+      <div class="service-item" style="background-color: #fffacd;">
+        <i class="fas fa-globe"></i>
+        <h3>{% if page.lang == 'es' %}Fiebre del Viajero{% else %}Traveler's Fever{% endif %}</h3>
+        <p>{% if page.lang == 'es' %}Evaluación y seguimiento de la fiebre del viajero (Enfermedades infecciosas tropicales).{% else %}Evaluation and follow-up for traveler's fever (Tropical Infectious diseases).{% endif %}</p>
+        <a href="{{ site.baseurl }}/{{ page.lang }}/services.html#travelers-fever">{% if page.lang == 'es' %}Leer más{% else %}Read more{% endif %}</a>
+      </div>
+  
+      <!-- Cardiovascular Risk Assessment -->
+      <div class="service-item" style="background-color: #e6e6fa;">
+        <i class="fas fa-heart"></i>
+        <h3>{% if page.lang == 'es' %}Evaluación del Riesgo Cardiovascular{% else %}Cardiovascular Risk Assessment{% endif %}</h3>
+        <p>{% if page.lang == 'es' %}Seguimiento del riesgo cardiovascular.{% else %}Cardiovascular risk follow-up.{% endif %}</p>
+        <a href="{{ site.baseurl }}/{{ page.lang }}/services.html#cardiovascular-risk">{% if page.lang == 'es' %}Leer más{% else %}Read more{% endif %}</a>
+      </div>
+  
+      <!-- Gastrointestinal Disorders -->
+      <div class="service-item" style="background-color: #f0fff0;">
+        <i class="fas fa-stomach"></i> <!-- Changed icon to fa-stomach -->
+        <h3>{% if page.lang == 'es' %}Trastornos Gastrointestinales{% else %}Gastrointestinal Disorders{% endif %}</h3>
+        <p>{% if page.lang == 'es' %}Condiciones y trastornos gastrointestinales y hepáticos.{% else %}Gastrointestinal and hepatic conditions and disorders.{% endif %}</p>
+        <a href="{{ site.baseurl }}/{{ page.lang }}/services.html#gastrointestinal-disorders">{% if page.lang == 'es' %}Leer más{% else %}Read more{% endif %}</a>
+      </div>
+  
+      <!-- Preventive Checkups -->
+      <div class="service-item" style="background-color: #f0fff0;">
+        <i class="fas fa-stethoscope"></i>
+        <h3>{% if page.lang == 'es' %}Chequeos Preventivos{% else %}Preventive Checkups{% endif %}</h3>
+        <p>{% if page.lang == 'es' %}Chequeos de salud preventivos regulares.{% else %}Regular preventive health checkups.{% endif %}</p>
+        <a href="{{ site.baseurl }}/{{ page.lang }}/services.html#preventive-checkups">{% if page.lang == 'es' %}Leer más{% else %}Read more{% endif %}</a>
+      </div>
+    </div>
+  </section>
+  
