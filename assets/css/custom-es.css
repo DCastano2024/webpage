@@ -449,4 +449,111 @@ h2 {
   align-items: center;
   gap: 20px;
 }
+/* Language Switch Buttons Styling */
+.language-switch {
+  display: flex;
+  gap: 10px;
+  margin: 0 15px;
+}
+
+.lang-btn {
+  padding: 5px 10px;
+  background-color: #fff;
+  color: #333;
+  text-decoration: none;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.lang-btn:hover {
+  background-color: #f0f0f0;
+}
+
+.lang-btn.active {
+  background-color: #007bff;
+  color: #fff;
+  border-color: #007bff;
+}
+/* Phone Styling Optimizations */
+@media (max-width: 480px) {
+  /* Adjust header links and social icons */
+  .header-links, .social-icons {
+    flex-direction: column; /* Stack vertically */
+    align-items: center; /* Center align */
+    gap: 15px; /* Increase space between elements */
+  }
+
+  .service-item {
+    width: 100%; /* Full width for services */
+    margin-bottom: 20px; /* Space between service items */
+  }
+
+  /* Adjust site title */
+  .site-title {
+    font-size: 1.8rem; /* Smaller font size for mobile */
+  }
+
+  /* Adjust content section */
+  .content-section {
+    padding: 10px; /* Reduced padding */
+    flex-direction: column; /* Stack content vertically */
+  }
+
+  .content-section img {
+    margin-bottom: 20px; /* Space below images */
+  }
+
+  /* Adjust background-image div */
+  .background-image {
+    padding: 15px; /* Less padding */
+  }
+
+  .background-image h2 {
+    font-size: 1.6rem; /* Smaller header font size */
+  }
+
+  .background-image ul {
+    padding-left: 15px; /* Adjust padding */
+  }
+
+  /* Adjust language switch button alignment */
+  .language-switch {
+    justify-content: center; /* Center align buttons */
+    margin-top: 10px; /* Add some margin */
+  }
+
+  .lang-btn {
+    width: 80px; /* Increase button width */
+    font-size: 14px; /* Adjust font size */
+  }
+}
+/* Style for language switch buttons */
+.language-switch {
+  display: flex;
+  gap: 10px;
+  margin-left: auto; /* Align to the right */
+  align-items: center; /* Center vertically within the header */
+}
+
+.lang-btn {
+  padding: 5px 10px;
+  background-color: #fff;
+  color: #333;
+  text-decoration: none;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.lang-btn:hover {
+  background-color: #f0f0f0;
+}
+
+.lang-btn.active {
+  background-color: #007bff;
+  color: #fff;
+  border-color: #007bff;
+}
+
 

@@ -23,6 +23,11 @@ body {
   display: flex;
   justify-content: center;
   margin-top: 10px;
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  align-items: center;
+  z-index: 10; /* Ensure they appear above other content */
 }
 
 .social-icons a {
@@ -39,16 +44,16 @@ body {
 }
 
 /* Header adjustments */
-.header {
-  background-image: url('{{ site.baseurl }}/path/to/your/image.jpg'); /* Path to your background image */
+.header, .site-header {
+  background-image: url('{{ site.baseurl }}/path/to/your/header-image.jpg'); /* Path to your background image */
   background-size: cover; /* Cover the entire area of the header */
   background-position: center; /* Center the background image */
   position: relative; /* Needed for the overlay effect */
   font-family: 'Oswald', sans-serif; /* Apply Oswald font */
+  z-index: 0; /* Ensure it stays below text */
 }
 
-/* Adding an overlay */
-.header::after {
+.header::after, .site-header::after {
   content: '';
   position: absolute;
   top: 0;
@@ -56,27 +61,6 @@ body {
   right: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.5); /* Black background with 50% opacity */
-  z-index: 1;
-}
-
-/* Adjustments for the site header */
-.site-header {
-  background-image: url('{{ site.baseurl }}/path/to/your/header-image.jpg');
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  z-index: 0; /* Ensure it stays below text */
-  font-family: 'Oswald', sans-serif; /* Apply Oswald font */
-}
-
-.site-header::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
   z-index: 1; /* Below the text and links */
 }
 
@@ -84,6 +68,9 @@ body {
 .site-title {
   font-size: 2.5rem; /* Adjust this value to your desired font size */
   font-family: 'Oswald', sans-serif; /* Apply Oswald font */
+  color: white;
+  z-index: 2;
+  position: relative;
 }
 
 @media (max-width: 768px) {
@@ -221,39 +208,6 @@ img {
 .whatsapp-contact i {
   font-size: 30px;
   vertical-align: middle;
-}
-
-/* Header adjustments */
-.site-header {
-  background-image: url('{{ site.baseurl }}/path/to/your/header-image.jpg');
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  z-index: 0;
-}
-
-.site-header::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 1;
-}
-
-.site-title {
-  font-size: 2.5rem;
-  color: white;
-  z-index: 2;
-  position: relative;
-}
-
-@media (max-width: 768px) {
-  .site-title {
-    font-size: 2rem;
-  }
 }
 
 /* Navigation adjustments */
@@ -433,20 +387,112 @@ h2 {
     padding-left: 15px; /* Adjust padding */
   }
 }
-.social-icons {
-  position: absolute;
-  top: 10px;
-  left: 20px;
+
+/* Language Switch Buttons Styling */
+.language-switch {
   display: flex;
-  align-items: center;
-  z-index: 10; /* Ensure they appear above other content */
+  gap: 10px;
+  margin: 0 15px;
 }
 
-.header-links {
-  margin-left: auto;
-  margin-right: 20px; /* Adjust spacing for alignment with social icons */
-  display: flex;
-  align-items: center;
-  gap: 20px;
+.lang-btn {
+  padding: 5px 10px;
+  background-color: #fff;
+  color: #333;
+  text-decoration: none;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  transition: background-color 0.3s, color 0.3s;
+  z-index: 3; /* Ensure buttons are above other elements */
+  position: relative; /* Position relative to avoid being blocked */
 }
 
+.lang-btn:hover {
+  background-color: #f0f0f0;
+}
+
+.lang-btn.active {
+  background-color: #007bff;
+  color: #fff;
+  border-color: #007bff;
+}
+/* Phone Styling Optimizations */
+@media (max-width: 480px) {
+  /* Adjust header links and social icons */
+  .header-links, .social-icons {
+    flex-direction: column; /* Stack vertically */
+    align-items: center; /* Center align */
+    gap: 15px; /* Increase space between elements */
+  }
+
+  .service-item {
+    width: 100%; /* Full width for services */
+    margin-bottom: 20px; /* Space between service items */
+  }
+
+  /* Adjust site title */
+  .site-title {
+    font-size: 1.8rem; /* Smaller font size for mobile */
+  }
+
+  /* Adjust content section */
+  .content-section {
+    padding: 10px; /* Reduced padding */
+    flex-direction: column; /* Stack content vertically */
+  }
+
+  .content-section img {
+    margin-bottom: 20px; /* Space below images */
+  }
+
+  /* Adjust background-image div */
+  .background-image {
+    padding: 15px; /* Less padding */
+  }
+
+  .background-image h2 {
+    font-size: 1.6rem; /* Smaller header font size */
+  }
+
+  .background-image ul {
+    padding-left: 15px; /* Adjust padding */
+  }
+
+  /* Adjust language switch button alignment */
+  .language-switch {
+    justify-content: center; /* Center align buttons */
+    margin-top: 10px; /* Add some margin */
+  }
+
+  .lang-btn {
+    width: 80px; /* Increase button width */
+    font-size: 14px; /* Adjust font size */
+  }
+}
+/* Style for language switch buttons */
+.language-switch {
+  display: flex;
+  gap: 10px;
+  margin-left: auto; /* Align to the right */
+  align-items: center; /* Center vertically within the header */
+}
+
+.lang-btn {
+  padding: 5px 10px;
+  background-color: #fff;
+  color: #333;
+  text-decoration: none;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.lang-btn:hover {
+  background-color: #f0f0f0;
+}
+
+.lang-btn.active {
+  background-color: #007bff;
+  color: #fff;
+  border-color: #007bff;
+}
