@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "¿Eres un hablante de inglés en Medellín y necesitas un experto en medicina interna?"
+title: "¿Are you a english speaker and need an internal medicine specialist?"
 date: 2024-01-01 22:28:30 -0500
 categories: Primer post
 ---
