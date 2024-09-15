@@ -510,3 +510,31 @@ h2 {
     padding-left: 15px; /* Adjust padding */
   }
 }
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Ensure icons are centered vertically */
+  position: relative; /* Changed from absolute */
+  top: 10px; /* Adjust as needed to move icons down */
+  z-index: 5;
+  margin-top: 10px; /* Adds space at the top */
+}
+
+/* Additional adjustments for individual icons, if needed */
+.social-icons a {
+  margin: 0 15px; /* Space between icons */
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Adjusting the alignment within the grey band */
+.header-top {
+  background: rgba(0, 0, 0, 0.5); /* Keeps the semi-transparent overlay */
+  padding: 10px 20px; /* Adjusted padding to provide more space */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center; /* Aligns items vertically in the middle */
+  z-index: 3;
+  position: relative; /* Required for z-index */
+}
+

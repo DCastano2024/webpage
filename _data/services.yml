@@ -1,0 +1,71 @@
+- id: hypertension
+  background_color: "#f0f8ff"
+  icon: "fa-heartbeat"
+  title_es: "Hipertensión"
+  title_en: "Hypertension"
+  description_es: "Control y manejo de la hipertensión."
+  description_en: "Hypertension control and management."
+
+- id: copd
+  background_color: "#ffe4e1"
+  icon: "fa-lungs"
+  title_es: "EPOC (Enfermedad Pulmonar Obstructiva Crónica)"
+  title_en: "COPD (Chronic Obstructive Pulmonary Disease)"
+  description_es: "Tratamiento y control del EPOC."
+  description_en: "Treatment and management of COPD."
+
+- id: diabetes
+  background_color: "#fafad2"
+  icon: "fa-syringe"
+  title_es: "Diabetes Mellitus"
+  title_en: "Diabetes Mellitus"
+  description_es: "Tratamiento y manejo de la Diabetes Mellitus tipo 2."
+  description_en: "Type 2 Diabetes treatment and management."
+
+- id: ckd
+  background_color: "#e0ffff"
+  icon: "fa-vial"  # Changed icon to fa-vial
+  title_es: "Enfermedad Renal Crónica (ERC)"
+  title_en: "Chronic Kidney Disease (CKD)"
+  description_es: "Control y seguimiento de la enfermedad renal crónica."
+  description_en: "Control and follow-up for Chronic Kidney Disease."
+
+- id: migraine
+  background_color: "#f5f5dc"
+  icon: "fa-brain"
+  title_es: "Migraña"
+  title_en: "Migraine"
+  description_es: "Tratamiento y manejo de la migraña."
+  description_en: "Migraine treatment and management."
+
+- id: travelers-fever
+  background_color: "#fffacd"
+  icon: "fa-globe"
+  title_es: "Fiebre del Viajero"
+  title_en: "Traveler's Fever"
+  description_es: "Evaluación y seguimiento de la fiebre del viajero (Enfermedades infecciosas tropicales)."
+  description_en: "Evaluation and follow-up for traveler's fever (Tropical Infectious diseases)."
+
+- id: cardiovascular-risk
+  background_color: "#e6e6fa"
+  icon: "fa-heart"
+  title_es: "Evaluación del Riesgo Cardiovascular"
+  title_en: "Cardiovascular Risk Assessment"
+  description_es: "Seguimiento del riesgo cardiovascular."
+  description_en: "Cardiovascular risk follow-up."
+
+- id: gastrointestinal-disorders
+  background_color: "#f0fff0"
+  icon: "fa-notes-medical"  # Kept icon for Gastrointestinal Disorders
+  title_es: "Trastornos Gastrointestinales"
+  title_en: "Gastrointestinal Disorders"
+  description_es: "Condiciones y trastornos gastrointestinales y hepáticos."
+  description_en: "Gastrointestinal and hepatic conditions and disorders."
+
+- id: preventive-checkups
+  background_color: "#d0f8ff"
+  icon: "fa-user-md"
+  title_es: "Chequeos Preventivos"
+  title_en: "Preventive Checkups"
+  description_es: "Chequeos de salud preventivos regulares para mantener su bienestar."
+  description_en: "Regular preventive health checkups to maintain your well-being."
