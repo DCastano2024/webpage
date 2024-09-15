@@ -526,6 +526,29 @@ h2 {
   display: inline-block;
   vertical-align: middle;
 }
+.social-icons a {
+  font-size: 30px; /* Adjust icon size */
+  text-decoration: none; /* Remove underline */
+  margin: 0 15px; /* Space between icons */
+  opacity: 0.8; /* Set opacity for icons */
+}
+
+.social-icons a[title="WhatsApp"] i {
+  color: #25D366; /* WhatsApp green */
+}
+
+.social-icons a[title="Instagram"] i {
+  color: #E1306C; /* Instagram pink-red */
+}
+
+.social-icons a[title="Email"] i {
+  color: #FFFFFF; /* Email white */
+}
+
+.social-icons a:hover {
+  opacity: 1; /* On hover, make icons fully opaque */
+}
+
 
 /* Adjusting the alignment within the grey band */
 .header-top {
@@ -538,7 +561,7 @@ h2 {
   position: relative; /* Required for z-index */
 }
 .header-links a {
-  color: #007bff; /* Change to your desired blue color */
+  color: #ebebeb; /* Change to your desired blue color */
   text-decoration: none; /* Remove underline */
   font-weight: bold; /* Keep them bold if preferred */
 }

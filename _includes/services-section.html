@@ -11,7 +11,7 @@
         <p>{% if page.lang == 'es' %}{{ service.description_es }}{% else %}{{ service.description_en }}{% endif %}</p>
         
         <!-- Updated links to the services.md page -->
-        <a href="{{ site.baseurl }}/services/2024/01/01/services.html#{{ service.id }}">{% if page.lang == 'es' %}Leer más{% else %}Read more{% endif %}</a>
+        <a href="{{ site.baseurl }}/services/services.html#{{ service.id }}">{% if page.lang == 'es' %}Leer más{% else %}Read more{% endif %}</a>
       </div>
     {% endfor %}
   </div>

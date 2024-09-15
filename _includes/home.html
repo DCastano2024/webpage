@@ -1,86 +1,64 @@
 <div class="home">
-    <!-- Title Section -->
-    {% if page.title %}
-      <h1 class="page-heading">{{ page.title }}</h1>
-    {% endif %}
-  
-    <!-- Image and Introduction Text Section -->
-    <div class="content-section">
-      <div class="image-container">
-        <img src="{{ site.baseurl }}/assets/images/david.jpg" alt="{% if page.lang == 'es' %}Cuidado de medicina interna en Medellín{% else %}Internal medicine care in Medellín{% endif %}" width="350" height="600">
-      </div>
-      <div class="text-container">
-        <h1>
-          {% if page.lang == "es" %}
-            Nos especializamos en medicina interna para hispanohablantes
-          {% else %}
-            We excel at internal medicine for English speakers
-          {% endif %}
-        </h1>
-        <p>
-          {% if page.lang == "es" %}
-            Programe una cita con el Dr. Castaño y compruébelo usted mismo.
-          {% else %}
-            Schedule an appointment with Dr. Castaño and see for yourself.
-          {% endif %}
-        </p>
-        <p>
-          {% if page.lang == "es" %}
-            Tengo 13 años de experiencia, incluidos 8 años en medicina interna. He trabajado en hospitales, departamentos de emergencia y atención ambulatoria. Mi enfoque holístico asegura un cuidado personalizado y compasivo adaptado a las necesidades de cada paciente. Estoy comprometido con la salud y el bienestar a largo plazo a través de la educación del paciente y la atención integral.
-          {% else %}
-            I have 13 years of experience, including 8 years in internal medicine. I have worked in hospital settings, emergency departments, and ambulatory care. My holistic approach ensures personalized, compassionate care tailored to each patient's needs. I am committed to long-term health and wellness through patient education and comprehensive care.
-          {% endif %}
-        </p>
-      </div>
+  <!-- Title Section -->
+  {% if page.title %}
+    <h1 class="page-heading">{{ page.title }}</h1>
+  {% endif %}
+
+  <!-- Image and Introduction Text Section -->
+  <div class="content-section">
+    <div class="image-container">
+      <img src="{{ site.baseurl }}/assets/images/david.jpg" alt="{% if page.lang == 'es' %}Cuidado de medicina interna en Medellín{% else %}Internal medicine care in Medellín{% endif %}" width="350" height="600">
     </div>
-  
-    <!-- WhatsApp Contact Section -->
-    <section class="whatsapp-contact">
-      <a href="https://wa.me/573043807052?text={% if page.lang == 'es' %}Contacte con nosotros y programe una cita{% else %}Contact us and set an appointment{% endif %}" target="_blank" style="display: block; text-align: center; margin: 20px 0; font-size: 18px; color: #25D366; text-decoration: none;">
-        <i class="fab fa-whatsapp" style="font-size: 30px; vertical-align: middle;"></i> 
-        {% if page.lang == 'es' %}Contacte con nosotros y programe una cita{% else %}Contact us and set an appointment{% endif %}
-      </a>
-    </section>
-  
-    <!-- Services Section -->
-    <section class="services">
-      <h2>{% if page.lang == 'es' %}Nuestros Servicios{% else %}Our Services{% endif %}</h2>
-      <p>{% if page.lang == 'es' %}Descubra los servicios de medicina interna que ofrecemos:{% else %}Discover the internal medicine services we offer:{% endif %}</p>
-      <div class="services-panel">
-        <!-- Service Items -->
-        {% for service in site.data.services %}
-          <div class="service-item" style="background-color: {{ service.background_color }};">
-            <i class="fas {{ service.icon }}"></i>
-            <h3>{% if page.lang == 'es' %}{{ service.title_es }}{% else %}{{ service.title_en }}{% endif %}</h3>
-            <p>{% if page.lang == 'es' %}{{ service.description_es }}{% else %}{{ service.description_en }}{% endif %}</p>
-            <a href="{{ site.baseurl }}/{{ page.lang }}/services.html#{{ service.id }}">{% if page.lang == 'es' %}Leer más{% else %}Read more{% endif %}</a>
-          </div>
-        {% endfor %}
-      </div>
-    </section>
-  
-    <!-- Posts Section -->
-    {%- if site.posts.size > 0 -%}
-      <h2 class="post-list-heading">{% if page.lang == 'es' %}Publicaciones{% else %}Posts{% endif %}</h2>
-      <ul class="post-list">
-        {%- for post in site.posts -%}
-          <li>
-            {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-            <span class="post-meta">{{ post.date | date: date_format }}</span>
-            <h3>
-              <a class="post-link" href="{{ post.url | relative_url }}">
-                {{ post.title | escape }}
-              </a>
-            </h3>
-            {%- if site.show_excerpts -%}
-              {{ post.excerpt }}
-            {%- endif -%}
-          </li>
-        {%- endfor -%}
-      </ul>
-      <p class="rss-subscribe">
-        {% if page.lang == 'es' %}suscribirse{% else %}subscribe{% endif %} <a href="{{ site.baseurl }}/feed.xml" rel="nofollow">{% if page.lang == 'es' %}vía RSS{% else %}via RSS{% endif %}</a>
+    <div class="text-container">
+      <h1>
+        {% if page.lang == "es" %}
+          Nos especializamos en medicina interna para hispanohablantes
+        {% else %}
+          We excel at internal medicine for English speakers
+        {% endif %}
+      </h1>
+      <p>
+        {% if page.lang == "es" %}
+          Programe una cita con el Dr. Castaño y compruébelo usted mismo.
+        {% else %}
+          Schedule an appointment with Dr. Castaño and see for yourself.
+        {% endif %}
       </p>
-    {%- endif -%}
+      <p>
+        {% if page.lang == "es" %}
+          Tengo 13 años de experiencia, incluidos 8 años en medicina interna. He trabajado en hospitales, departamentos de emergencia y atención ambulatoria. Mi enfoque holístico asegura un cuidado personalizado y compasivo adaptado a las necesidades de cada paciente. Estoy comprometido con la salud y el bienestar a largo plazo a través de la educación del paciente y la atención integral.
+        {% else %}
+          I have 13 years of experience, including 8 years in internal medicine. I have worked in hospital settings, emergency departments, and ambulatory care. My holistic approach ensures personalized, compassionate care tailored to each patient's needs. I am committed to long-term health and wellness through patient education and comprehensive care.
+        {% endif %}
+      </p>
+    </div>
   </div>
-  
+
+  <!-- WhatsApp Contact Section -->
+  <section class="whatsapp-contact">
+    <a href="https://wa.me/573043807052?text={% if page.lang == 'es' %}Contacte con nosotros y programe una cita{% else %}Contact us and set an appointment{% endif %}" target="_blank" style="display: block; text-align: center; margin: 20px 0; font-size: 18px; color: #25D366; text-decoration: none;">
+      <i class="fab fa-whatsapp" style="font-size: 30px; vertical-align: middle;"></i> 
+      {% if page.lang == 'es' %}Contacte con nosotros y programe una cita{% else %}Contact us and set an appointment{% endif %}
+    </a>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services">
+    <h2>{% if page.lang == 'es' %}Nuestros Servicios{% else %}Our Services{% endif %}</h2>
+    <p>{% if page.lang == 'es' %}Descubra los servicios de medicina interna que ofrecemos:{% else %}Discover the internal medicine services we offer:{% endif %}</p>
+    <div class="services-panel">
+      <!-- Service Items -->
+      {% for service in site.data.services %}
+        <div class="service-item" style="background-color: {{ service.background_color }};">
+          <i class="fas {{ service.icon }}"></i>
+          <h3>{% if page.lang == 'es' %}{{ service.title_es }}{% else %}{{ service.title_en }}{% endif %}</h3>
+          <p>{% if page.lang == 'es' %}{{ service.description_es }}{% else %}{{ service.description_en }}{% endif %}</p>
+          <a href="{{ site.baseurl }}/services/services#{{ service.id }}">{% if page.lang == 'es' %}Leer más{% else %}Read more{% endif %}</a>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- Include Posts Section -->
+  {% include posts-section.html %}
+</div>
