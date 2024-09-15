@@ -1,0 +1,452 @@
+/* Importar la fuente Oswald */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap');
+@use "sass:math";
+
+/* Estilo general del cuerpo */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Oswald', sans-serif;
+  line-height: 1.6;
+}
+
+/* Asegurar que los enlaces en el encabezado tengan el z-index y la posición correcta */
+.header a, .nav-link { 
+  color: white; /* Color del texto blanco */
+  z-index: 2; /* Asegurar que el texto aparezca por encima de la superposición */
+  position: relative;
+  font-family: 'Oswald', sans-serif; /* Aplicar fuente Oswald */
+}
+
+/* Ajustes para los iconos sociales */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  margin: 0 15px; /* Espacio entre iconos */
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.social-icons img, .social-icons i {
+  display: inline-block;
+  vertical-align: middle;
+  height: 30px; /* Ajustar tamaño según sea necesario */
+  width: 30px; /* Ajustar tamaño según sea necesario */
+}
+
+/* Ajustes para el encabezado */
+.header {
+  background-image: url('{{ site.baseurl }}/path/to/your/image.jpg'); /* Ruta a la imagen de fondo */
+  background-size: cover; /* Cubrir toda el área del encabezado */
+  background-position: center; /* Centrar la imagen de fondo */
+  position: relative; /* Necesario para el efecto de superposición */
+  font-family: 'Oswald', sans-serif; /* Aplicar fuente Oswald */
+}
+
+/* Añadir una superposición */
+.header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Fondo negro con 50% de opacidad */
+  z-index: 1;
+}
+
+/* Ajustes para el encabezado del sitio */
+.site-header {
+  background-image: url('{{ site.baseurl }}/path/to/your/header-image.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 0; /* Asegurar que se mantenga debajo del texto */
+  font-family: 'Oswald', sans-serif; /* Aplicar fuente Oswald */
+}
+
+.site-header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Ajustar la opacidad según sea necesario */
+  z-index: 1; /* Debajo del texto y enlaces */
+}
+
+/* Ajustar el tamaño de la fuente del título del sitio */
+.site-title {
+  font-size: 2.5rem; /* Ajustar este valor al tamaño de fuente deseado */
+  font-family: 'Oswald', sans-serif; /* Aplicar fuente Oswald */
+}
+
+@media (max-width: 768px) {
+  .site-title {
+    font-size: 2rem; /* Ajustar este valor para pantallas más pequeñas */
+  }
+}
+
+/* Estilos personalizados para el diseño de inicio */
+.content-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+  font-family: 'Oswald', sans-serif; /* Aplicar fuente Oswald */
+}
+
+.image-container {
+  flex: 1;
+  max-width: 50%;
+  text-align: center;
+}
+
+.text-container {
+  flex: 1;
+  max-width: 50%;
+  padding-left: 20px; /* Agregar espacio entre la imagen y el texto */
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  .content-section {
+    flex-direction: column;
+  }
+
+  .image-container,
+  .text-container {
+    max-width: 100%;
+    padding-left: 0; /* Eliminar el relleno en pantallas pequeñas */
+  }
+}
+
+/* Estilo de la sección de servicios */
+.services {
+  text-align: center;
+  margin: 40px 0;
+  font-family: 'Oswald', sans-serif; /* Aplicar fuente Oswald */
+}
+
+.services h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  font-family: 'Oswald', sans-serif; /* Aplicar fuente Oswald */
+}
+
+.services p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  font-family: 'Oswald', sans-serif; /* Aplicar fuente Oswald */
+}
+
+.services-panel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.service-item {
+  background: #f0f0f0;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  flex: 0 1 21%; /* Ajustar este valor para controlar el número de elementos por fila */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: transform 0.3s ease; /* Agregar transición para un escalado suave */
+  font-family: 'Oswald', sans-serif; /* Aplicar fuente Oswald */
+}
+
+.service-item:hover {
+  transform: scale(1.05); /* Aumentar ligeramente el tamaño al pasar el ratón */
+}
+
+.service-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  font-family: 'Oswald', sans-serif; /* Aplicar fuente Oswald */
+}
+
+.service-item p {
+  font-size: 1rem;
+  font-family: 'Oswald', sans-serif; /* Aplicar fuente Oswald */
+}
+
+/* Estilo del icono de los elementos de servicio */
+.service-item i {
+  font-size: 2rem; /* Ajustar tamaño según sea necesario */
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  .service-item {
+    flex: 0 1 45%; /* Ajustar este valor para pantallas más pequeñas */
+  }
+}
+
+@media (max-width: 480px) {
+  .service-item {
+    flex: 0 1 90%; /* Ajustar este valor para las pantallas más pequeñas */
+  }
+}
+
+/* Sección de contacto de WhatsApp */
+.whatsapp-contact a {
+  display: block;
+  text-align: center;
+  margin: 20px 0;
+  font-size: 18px;
+  color: #25D366;
+  text-decoration: none;
+  font-family: 'Oswald', sans-serif; /* Aplicar fuente Oswald */
+}
+
+.whatsapp-contact a:hover {
+  color: #128C7E;
+}
+
+.whatsapp-contact i {
+  font-size: 30px;
+  vertical-align: middle;
+}
+
+/* Ajustes del encabezado */
+.site-header {
+  background-image: url('{{ site.baseurl }}/path/to/your/header-image.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 0;
+}
+
+.site-header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.site-title {
+  font-size: 2.5rem;
+  color: white;
+  z-index: 2;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .site-title {
+    font-size: 2rem;
+  }
+}
+
+/* Ajustes de navegación */
+.site-nav {
+  text-align: center;
+}
+
+.site-nav .trigger {
+  display: none;
+}
+
+.nav-trigger:checked + .trigger {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .site-nav {
+    margin-top: 10px;
+  }
+
+  .site-nav .trigger {
+    display: none;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    padding: 10px;
+  }
+
+  .nav-trigger:checked + .trigger {
+    display: block;
+  }
+
+  .nav-trigger + label {
+    display: block;
+    cursor: pointer;
+    z-index: 2;
+    position: relative;
+  }
+}
+
+/* Estilo de la barra superior */
+.header-top {
+  background: rgba(0, 0, 0, 0.5); /* Superposición semitransparente */
+  padding: 10px 20px; /* Relleno para espacio */
+  display: flex; /* Alinea los iconos sociales horizontalmente */
+  justify-content: flex-end; /* Alinea los iconos a la derecha */
+  z-index: 3; /* Asegura que esté por encima de otro contenido */
+  position: relative; /* Necesario para el z-index */
+}
+
+/* Asegurar que los enlaces del encabezado no se superpongan con los iconos */
+.header-links {
+  position: relative;
+  z-index: 4; /* Asegura que los enlaces estén por encima de los iconos */
+  display: flex;
+  align-items: center; /* Alinea los enlaces verticalmente */
+  gap: 20px; /* Espaciado entre cada enlace */
+}
+
+.header-link {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.header-link:hover {
+  color: #ccc; /* Efecto de desplazamiento para mejor usabilidad */
+}
+
+/* Ajustes específicos para vistas móviles */
+@media (max-width: 768px) {
+  .header-top {
+    flex-direction: column; /* Alinea verticalmente los enlaces y los iconos en pantallas pequeñas */
+    align-items: center; /* Centra los elementos */
+  }
+
+  .social-icons, .header-links {
+    margin-top: 10px; /* Agrega margen superior para espaciamiento */
+  }
+}
+
+/* Ajustes generales para elementos de lista dentro de secciones de contenido */
+.content-section ul, .background-image ul {
+  margin: 20px 0; /* Espacio entre los elementos de la lista y el contenido circundante */
+  padding-left: 20px; /* Espacio entre las viñetas y el texto */
+  list-style-type: disc; /* Asegurar que los puntos de la lista sean visibles */
+}
+
+.content-section ul li, .background-image ul li {
+  margin-bottom: 10px; /* Espacio entre los elementos individuales de la lista */
+  line-height: 1.5; /* Altura de la línea dentro de los elementos de la lista */
+}
+
+/* Centrar el botón */
+.intro button {
+  display: block;
+  margin: 20px auto; /* Centra el botón horizontalmente */
+  padding: 10px 20px;
+  background-color: #333; /* Color de fondo del botón */
+  color: #fff; /* Color del texto del botón */
+  border: none;
+  cursor: pointer;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.intro button:hover {
+  background-color: #555; /* Oscurecer el color del botón al pasar el ratón */
+}
+
+/* Ajustar el espaciado de líneas para los encabezados */
+h2 {
+  margin-top: 30px; /* Añadir espacio antes de los encabezados */
+  margin-bottom: 15px; /* Añadir espacio después de los encabezados */
+  line-height: 1.4; /* Ajustar la altura de la línea para la legibilidad */
+}
+
+/* Altura de línea y espaciado para el div de imagen de fondo */
+.background-image {
+  padding: 20px; /* Espacio dentro del div */
+  line-height: 1.6; /* Ajustar la altura de la línea */
+}
+
+.background-image h2 {
+  margin-top: 30px; /* Espacio arriba de los encabezados */
+  margin-bottom: 15px; /* Espacio debajo de los encabezados */
+}
+
+/* Optimización de estilo para teléfonos */
+@media (max-width: 480px) {
+  .header-links, .social-icons {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* Espacio aumentado entre elementos */
+  }
+
+  .service-item {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .intro h2 {
+    font-size: 1.8rem; /* Reducir el tamaño de fuente para pantallas más pequeñas */
+    text-align: center;
+  }
+
+  .intro p {
+    text-align: center;
+    font-size: 1.2rem; /* Ajustar el tamaño de la fuente para la legibilidad */
+  }
+
+  .site-title {
+    font-size: 1.8rem;
+  }
+
+  .content-section {
+    padding: 10px;
+  }
+
+  .content-section img {
+    margin-bottom: 20px; /* Agregar espacio debajo de las imágenes */
+  }
+
+  .background-image {
+    padding: 15px;
+  }
+
+  .background-image h2 {
+    font-size: 1.6rem; /* Ajustar el tamaño de la fuente de los encabezados */
+  }
+
+  .background-image ul {
+    padding-left: 15px; /* Ajustar el relleno */
+  }
+}
+.social-icons {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  z-index: 10; /* Ensure they appear above other content */
+}
+
+.header-links {
+  margin-left: auto;
+  margin-right: 20px; /* Adjust spacing for alignment with social icons */
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+

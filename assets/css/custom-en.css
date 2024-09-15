@@ -1,0 +1,452 @@
+/* Import the Oswald font */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap');
+@use "sass:math";
+
+/* General body styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Oswald', sans-serif;
+  line-height: 1.6;
+}
+
+/* Ensure links in header have proper z-index and position */
+.header a, .nav-link { 
+  color: white; /* Set text color to white */
+  z-index: 2; /* Ensure the text appears above the overlay */
+  position: relative;
+  font-family: 'Oswald', sans-serif; /* Apply Oswald font */
+}
+
+/* Social icons adjustments */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  margin: 0 15px; /* Space between icons */
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.social-icons img, .social-icons i {
+  display: inline-block;
+  vertical-align: middle;
+  height: 30px; /* Adjust size as needed */
+  width: 30px; /* Adjust size as needed */
+}
+
+/* Header adjustments */
+.header {
+  background-image: url('{{ site.baseurl }}/path/to/your/image.jpg'); /* Path to your background image */
+  background-size: cover; /* Cover the entire area of the header */
+  background-position: center; /* Center the background image */
+  position: relative; /* Needed for the overlay effect */
+  font-family: 'Oswald', sans-serif; /* Apply Oswald font */
+}
+
+/* Adding an overlay */
+.header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Black background with 50% opacity */
+  z-index: 1;
+}
+
+/* Adjustments for the site header */
+.site-header {
+  background-image: url('{{ site.baseurl }}/path/to/your/header-image.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 0; /* Ensure it stays below text */
+  font-family: 'Oswald', sans-serif; /* Apply Oswald font */
+}
+
+.site-header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+  z-index: 1; /* Below the text and links */
+}
+
+/* Adjusting the font size of the site title */
+.site-title {
+  font-size: 2.5rem; /* Adjust this value to your desired font size */
+  font-family: 'Oswald', sans-serif; /* Apply Oswald font */
+}
+
+@media (max-width: 768px) {
+  .site-title {
+    font-size: 2rem; /* Adjust this value for smaller screens */
+  }
+}
+
+/* Custom styles for the home layout */
+.content-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+  font-family: 'Oswald', sans-serif; /* Apply Oswald font */
+}
+
+.image-container {
+  flex: 1;
+  max-width: 50%;
+  text-align: center;
+}
+
+.text-container {
+  flex: 1;
+  max-width: 50%;
+  padding-left: 20px; /* Add some space between image and text */
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .content-section {
+    flex-direction: column;
+  }
+
+  .image-container,
+  .text-container {
+    max-width: 100%;
+    padding-left: 0; /* Remove padding on small screens */
+  }
+}
+
+/* Services section styling */
+.services {
+  text-align: center;
+  margin: 40px 0;
+  font-family: 'Oswald', sans-serif; /* Apply Oswald font */
+}
+
+.services h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  font-family: 'Oswald', sans-serif; /* Apply Oswald font */
+}
+
+.services p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  font-family: 'Oswald', sans-serif; /* Apply Oswald font */
+}
+
+.services-panel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.service-item {
+  background: #f0f0f0;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  flex: 0 1 21%; /* Adjust this value to control the number of items per row */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: transform 0.3s ease; /* Add transition for smooth scaling */
+  font-family: 'Oswald', sans-serif; /* Apply Oswald font */
+}
+
+.service-item:hover {
+  transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+.service-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  font-family: 'Oswald', sans-serif; /* Apply Oswald font */
+}
+
+.service-item p {
+  font-size: 1rem;
+  font-family: 'Oswald', sans-serif; /* Apply Oswald font */
+}
+
+/* Service item icon styling */
+.service-item i {
+  font-size: 2rem; /* Adjust size as needed */
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .service-item {
+    flex: 0 1 45%; /* Adjust this value for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .service-item {
+    flex: 0 1 90%; /* Adjust this value for the smallest screens */
+  }
+}
+
+/* WhatsApp Contact Section */
+.whatsapp-contact a {
+  display: block;
+  text-align: center;
+  margin: 20px 0;
+  font-size: 18px;
+  color: #25D366;
+  text-decoration: none;
+  font-family: 'Oswald', sans-serif; /* Apply Oswald font */
+}
+
+.whatsapp-contact a:hover {
+  color: #128C7E;
+}
+
+.whatsapp-contact i {
+  font-size: 30px;
+  vertical-align: middle;
+}
+
+/* Header adjustments */
+.site-header {
+  background-image: url('{{ site.baseurl }}/path/to/your/header-image.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 0;
+}
+
+.site-header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.site-title {
+  font-size: 2.5rem;
+  color: white;
+  z-index: 2;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .site-title {
+    font-size: 2rem;
+  }
+}
+
+/* Navigation adjustments */
+.site-nav {
+  text-align: center;
+}
+
+.site-nav .trigger {
+  display: none;
+}
+
+.nav-trigger:checked + .trigger {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .site-nav {
+    margin-top: 10px;
+  }
+
+  .site-nav .trigger {
+    display: none;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    padding: 10px;
+  }
+
+  .nav-trigger:checked + .trigger {
+    display: block;
+  }
+
+  .nav-trigger + label {
+    display: block;
+    cursor: pointer;
+    z-index: 2;
+    position: relative;
+  }
+}
+
+/* Top Bar Style */
+.header-top {
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  padding: 10px 20px; /* Padding for breathing space */
+  display: flex; /* Aligns the social icons horizontally */
+  justify-content: flex-end; /* Aligns the icons to the right */
+  z-index: 3; /* Ensures it is above other content */
+  position: relative; /* Required for z-index */
+}
+
+/* Ensuring header links do not overlap icons */
+.header-links {
+  position: relative;
+  z-index: 4; /* Ensures links are below icons but above other content */
+  display: flex;
+  align-items: center; /* Aligns links vertically */
+  gap: 20px; /* Spacing between each link */
+}
+
+.header-link {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.header-link:hover {
+  color: #ccc; /* Hover effect for better usability */
+}
+
+/* Specific adjustments for mobile views */
+@media (max-width: 768px) {
+  .header-top {
+    flex-direction: column; /* Stacks links and icons vertically on smaller screens */
+    align-items: center; /* Center aligns items */
+  }
+
+  .social-icons, .header-links {
+    margin-top: 10px; /* Adds top margin for spacing */
+  }
+}
+
+/* General adjustments for list items within content sections */
+.content-section ul, .background-image ul {
+  margin: 20px 0; /* Space between the list items and surrounding content */
+  padding-left: 20px; /* Space between bullets and text */
+  list-style-type: disc; /* Ensure the bullet points are visible */
+}
+
+.content-section ul li, .background-image ul li {
+  margin-bottom: 10px; /* Space between individual list items */
+  line-height: 1.5; /* Line height within list items */
+}
+
+/* Center the button */
+.intro button {
+  display: block;
+  margin: 20px auto; /* Center the button horizontally */
+  padding: 10px 20px;
+  background-color: #333; /* Button background color */
+  color: #fff; /* Button text color */
+  border: none;
+  cursor: pointer;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.intro button:hover {
+  background-color: #555; /* Darken the button color on hover */
+}
+
+/* Adjust line spacing for headers */
+h2 {
+  margin-top: 30px; /* Add space before headers */
+  margin-bottom: 15px; /* Add space after headers */
+  line-height: 1.4; /* Adjust line height for readability */
+}
+
+/* Line height and spacing for the background-image div */
+.background-image {
+  padding: 20px; /* Space inside the div */
+  line-height: 1.6; /* Adjust line height */
+}
+
+.background-image h2 {
+  margin-top: 30px; /* Space above headers */
+  margin-bottom: 15px; /* Space below headers */
+}
+
+/* Phone Styling Optimizations */
+@media (max-width: 480px) {
+  .header-links, .social-icons {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* Increased space between elements */
+  }
+
+  .service-item {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .intro h2 {
+    font-size: 1.8rem; /* Reduce font size for smaller screens */
+    text-align: center;
+  }
+
+  .intro p {
+    text-align: center;
+    font-size: 1.2rem; /* Adjust font size for readability */
+  }
+
+  .site-title {
+    font-size: 1.8rem;
+  }
+
+  .content-section {
+    padding: 10px;
+  }
+
+  .content-section img {
+    margin-bottom: 20px; /* Add space below images */
+  }
+
+  .background-image {
+    padding: 15px;
+  }
+
+  .background-image h2 {
+    font-size: 1.6rem; /* Adjust header font size */
+  }
+
+  .background-image ul {
+    padding-left: 15px; /* Adjust padding */
+  }
+}
+.social-icons {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  z-index: 10; /* Ensure they appear above other content */
+}
+
+.header-links {
+  margin-left: auto;
+  margin-right: 20px; /* Adjust spacing for alignment with social icons */
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
