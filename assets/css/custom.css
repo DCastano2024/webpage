@@ -537,4 +537,15 @@ h2 {
   z-index: 3;
   position: relative; /* Required for z-index */
 }
+.header-links a {
+  color: #007bff; /* Change to your desired blue color */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold; /* Keep them bold if preferred */
+}
+
+.header-links a:hover {
+  color: #0056b3; /* Darker blue for hover effect */
+  text-decoration: underline; /* Add underline on hover for better visibility */
+}
+
 
