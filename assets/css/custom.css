@@ -644,5 +644,60 @@ h2 {
     font-size: 14px; /* Adjust font size */
   }
 }
+/* Services Panel Adjustments */
+.services-panel {
+  display: flex;
+  flex-wrap: wrap; /* Wrap items for better mobile viewing */
+  justify-content: center; /* Center items */
+  gap: 20px; /* Space between items */
+}
+
+/* Service Item Styles */
+.service-item {
+  flex: 1 1 100%; /* Full width by default */
+  max-width: 120px; /* Reduce max width on larger screens */
+  text-align: center; /* Center content within each item */
+  padding: 10px; /* Add padding */
+  margin-bottom: 20px; /* Add margin between items */
+}
+
+/* Hide text on mobile, show only icons */
+.service-item .service-text {
+  display: none; /* Hide text on mobile */
+}
+
+/* Adjustments for larger screens */
+@media (min-width: 768px) {
+  .service-item {
+    flex: 1 1 30%; /* Allow items to take 30% width */
+    max-width: 300px; /* Increase max width */
+  }
+
+  .service-item .service-text {
+    display: block; /* Show text on larger screens */
+  }
+
+  .service-item .service-icon {
+    margin-bottom: 10px; /* Add space below icons */
+  }
+}
+
+/* Icon Container Adjustments */
+.service-icon i {
+  font-size: 36px; /* Larger size for icons */
+  color: #333; /* Icon color */
+}
+
+/* Further customization for very small screens */
+@media (max-width: 480px) {
+  .service-item {
+    max-width: 100px; /* Smaller width for small screens */
+  }
+
+  .service-icon i {
+    font-size: 30px; /* Smaller icon size */
+  }
+}
+
 
 

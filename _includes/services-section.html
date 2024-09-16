@@ -1,18 +1,17 @@
-<section class="services">
-  <h2>{% if page.lang == 'es' %}Nuestros Servicios{% else %}Our Services{% endif %}</h2>
-  <p>{% if page.lang == 'es' %}Descubra los servicios de medicina interna que ofrecemos:{% else %}Discover the internal medicine services we offer:{% endif %}</p>
-  
-  <div class="services-panel">
-    <!-- Loop through each service item from the Jekyll data file -->
-    {% for service in site.data.services %}
-      <div class="service-item" style="background-color: {{ service.background_color }};">
-        <i class="fas {{ service.icon }}"></i> <!-- Use icons from the data file -->
+<div class="services-panel">
+  <!-- Service Items -->
+  {% for service in site.data.services %}
+    <div class="service-item" style="background-color: {{ service.background_color }};">
+      <!-- Icon Container -->
+      <div class="service-icon">
+        <i class="fas {{ service.icon }}"></i>
+      </div>
+      <!-- Text Container -->
+      <div class="service-text">
         <h3>{% if page.lang == 'es' %}{{ service.title_es }}{% else %}{{ service.title_en }}{% endif %}</h3>
         <p>{% if page.lang == 'es' %}{{ service.description_es }}{% else %}{{ service.description_en }}{% endif %}</p>
-        
-        <!-- Updated links to the services.md page -->
-        <a href="{{ site.baseurl }}/services/services.html#{{ service.id }}">{% if page.lang == 'es' %}Leer más{% else %}Read more{% endif %}</a>
+        <a href="{{ site.baseurl }}/{{ page.lang }}/services.html#{{ service.id }}">{% if page.lang == 'es' %}Leer más{% else %}Read more{% endif %}</a>
       </div>
-    {% endfor %}
-  </div>
-</section>
+    </div>
+  {% endfor %}
+</div>
