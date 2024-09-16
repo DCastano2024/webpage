@@ -570,5 +570,79 @@ h2 {
   color: #0056b3; /* Darker blue for hover effect */
   text-decoration: underline; /* Add underline on hover for better visibility */
 }
+/* Social Media Icons Adjustments */
+.social-media-icons {
+  display: flex; /* Change from block to flex for horizontal alignment */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  gap: 15px; /* Space between icons */
+  margin: 10px 0; /* Adjust margin */
+}
+
+.social-media-icons i {
+  font-size: 20px; /* Smaller size for mobile */
+}
+
+/* Specific adjustment for smaller screens */
+@media (max-width: 768px) {
+  .social-media-icons i {
+    font-size: 18px; /* Even smaller on very small screens */
+  }
+}
+/* Navigation Link Adjustments */
+.nav-links {
+  display: flex; /* Change from block to flex for horizontal alignment */
+  justify-content: center; /* Center all navigation links */
+  align-items: center; /* Align them vertically */
+  gap: 20px; /* Space between links */
+  padding: 0;
+  margin: 10px 0; /* Adjust margin */
+  text-align: center;
+}
+
+/* Ensure all language versions use the same style */
+#lang-links {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    font-size: 14px; /* Smaller font size on mobile */
+    justify-content: center;
+  }
+}
+/* Services Panel Adjustments */
+.services-panel {
+  max-width: 90%; /* Reduce width for mobile */
+  margin: 0 auto; /* Center panel */
+  display: flex; /* Change from block to flex */
+  flex-wrap: wrap; /* Wrap items for better mobile viewing */
+  justify-content: center; /* Center items */
+  gap: 20px; /* Space between items */
+}
+
+.service-item {
+  flex: 1 1 100%; /* Allow items to be full width on smaller screens */
+  max-width: 320px; /* Limit max width on larger screens */
+  text-align: center; /* Center content within each item */
+  padding: 10px; /* Add padding */
+  margin-bottom: 20px; /* Add margin between items */
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+  .services-panel {
+    max-width: 90%; /* Further reduce width on smaller screens */
+    padding: 0 10px; /* Add padding to sides */
+  }
+
+  .service-item {
+    max-width: 100%; /* Make items 100% width */
+    font-size: 14px; /* Adjust font size */
+  }
+}
 
 
