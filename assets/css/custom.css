@@ -669,7 +669,7 @@ h2 {
 /* Adjustments for larger screens */
 @media (min-width: 768px) {
   .service-item {
-    flex: 1 1 50%; /* Allow items to take 30% width */
+    flex: 1 1 60%; /* Allow items to take 30% width */
     max-width: 300px; /* Increase max width */
   }
 
@@ -743,9 +743,29 @@ body, html {
 }
 
 /* Media Queries for Larger Screens */
-@media (min-width: 768px) {
+/*@media (min-width: 768px) {
   .service-item {
-    flex: 1
+    flex: 1*/
+
+/* Social Media Icons: Center and Resize for Mobile */
+.social-icons {
+  display: flex; /* Flexbox for alignment */
+  justify-content: center; /* Center horizontally */
+  gap: 15px; /* Space between icons */
+  margin: 20px 0; /* Spacing around icons */
+}
+
+.social-icons a {
+  font-size: 24px; /* Default size for desktop */
+  display: inline-block; /* Ensure icons are not too large */
+}
+
+@media (max-width: 480px) { /* Mobile View */
+  .social-icons a {
+    font-size: 18px; /* Smaller size for mobile */
+  }
+}
+
 
 
 
