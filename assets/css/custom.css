@@ -616,7 +616,7 @@ h2 {
 }
 /* Services Panel Adjustments */
 .services-panel {
-  max-width: 90%; /* Reduce width for mobile */
+  max-width: 95%; /* Reduce width for mobile */
   margin: 0 auto; /* Center panel */
   display: flex; /* Change from block to flex */
   flex-wrap: wrap; /* Wrap items for better mobile viewing */
@@ -635,7 +635,7 @@ h2 {
 /* Media Query for smaller screens */
 @media (max-width: 768px) {
   .services-panel {
-    max-width: 90%; /* Further reduce width on smaller screens */
+    max-width: 95%; /* Further reduce width on smaller screens */
     padding: 0 10px; /* Add padding to sides */
   }
 
@@ -669,7 +669,7 @@ h2 {
 /* Adjustments for larger screens */
 @media (min-width: 768px) {
   .service-item {
-    flex: 1 1 30%; /* Allow items to take 30% width */
+    flex: 1 1 50%; /* Allow items to take 30% width */
     max-width: 300px; /* Increase max width */
   }
 
@@ -698,6 +698,55 @@ h2 {
     font-size: 30px; /* Smaller icon size */
   }
 }
+/* General Reset for Mobile */
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Social Media Icons: Center and Resize for Mobile */
+.social-icons {
+  display: flex; /* Flexbox for alignment */
+  justify-content: center; /* Center horizontally */
+  gap: 10px; /* Space between icons */
+  margin: 20px 0; /* Spacing around icons */
+}
+
+.social-icons a {
+  font-size: 24px; /* Adjust size for mobile */
+  display: inline-block; /* Ensure icons are not too large */
+}
+
+/* Service Items: Center and Adjust for Mobile */
+.services-panel {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping */
+  justify-content: center; /* Center content */
+  gap: 15px; /* Space between items */
+  margin: 0 auto; /* Center the panel */
+  padding: 0 10px; /* Add padding to avoid edges */
+  width: 100%; /* Ensure full width */
+  box-sizing: border-box; /* Include padding in width */
+}
+
+/* Individual Service Items */
+.service-item {
+  flex: 1 1 100%; /* Full width for smaller screens */
+  max-width: 300px; /* Maximum width for larger screens */
+  text-align: center; /* Center text */
+  margin: 0 auto; /* Center each item */
+  padding: 10px; /* Padding for spacing */
+  box-sizing: border-box; /* Include padding in width */
+  background-color: #fff; /* Add a background color */
+  border-radius: 8px; /* Rounded corners for aesthetics */
+}
+
+/* Media Queries for Larger Screens */
+@media (min-width: 768px) {
+  .service-item {
+    flex: 1
+
 
 
 

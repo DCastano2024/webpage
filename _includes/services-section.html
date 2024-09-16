@@ -2,11 +2,9 @@
   <!-- Service Items -->
   {% for service in site.data.services %}
     <div class="service-item" style="background-color: {{ service.background_color }};">
-      <!-- Icon Container -->
       <div class="service-icon">
         <i class="fas {{ service.icon }}"></i>
       </div>
-      <!-- Text Container -->
       <div class="service-text">
         <h3>{% if page.lang == 'es' %}{{ service.title_es }}{% else %}{{ service.title_en }}{% endif %}</h3>
         <p>{% if page.lang == 'es' %}{{ service.description_es }}{% else %}{{ service.description_en }}{% endif %}</p>
