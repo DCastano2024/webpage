@@ -1,38 +1,33 @@
 <header class="site-header" role="banner" style="background-image: url('{{ site.baseurl }}/assets/images/header-image.jpg'); background-size: cover; background-position: center; position: relative;">
-  <div class="header-top">
-    <div class="header-links">
-      <!--<a href="{{ site.baseurl }}/services/2024/01/01/services.html" class="header-link">Services</a>-->
-      <a href="{{ site.baseurl }}/services/services" class="header-link">Services</a>
-      <a href="{{ site.baseurl }}/marketing/summary_of_doctor_castaño_experience/" class="header-link">Dr. Castaño Experience</a>
-      <a href="{{ site.baseurl }}/first/post/welcome-to-jekyll/" class="header-link">Book an Appointment</a>
-    </div>
-    <!-- Language Switcher -->
-    <div class="language-switcher">
-      <a href="{{ site.baseurl }}/es/index.html" class="language-link">ES</a> | 
-      <a href="{{ site.baseurl }}/en/index.html" class="language-link">EN</a>
-    </div>
-  </div>
+  <!-- Dark Overlay -->
+  <div style="content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
+
+  <!-- Header Content -->
   <div class="wrapper header-wrapper">
+    <!-- Navigation and Language Switcher -->
+    <div class="header-top">
+      <!-- Header Links (Flexbox for alignment) -->
+      <div class="header-links">
+        <a href="{{ site.baseurl }}/services/services" class="header-link">Services</a>
+        <a href="{{ site.baseurl }}/marketing/summary_of_doctor_castaño_experience/" class="header-link">Dr. Castaño Experience</a>
+        <a href="{{ site.baseurl }}/first/post/welcome-to-jekyll/" class="header-link">Book an Appointment</a>
+      </div>
+
+      <!-- Language Switcher -->
+      <div class="language-switcher">
+        <a href="{{ site.baseurl }}/es/index.html" class="language-link">ES</a> | 
+        <a href="{{ site.baseurl }}/en/index.html" class="language-link">EN</a>
+      </div>
+    </div>
+
+    <!-- Site Title -->
     <a class="site-title" rel="author" href="{{ site.baseurl }}/">{{ site.title | escape }}</a>
-    <!-- Social Icons directly below site title -->
+
+    <!-- Social Icons (Flexbox for alignment) -->
     <div class="social-icons">
       <a href="https://wa.me/573165321717" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
       <a href="https://www.instagram.com/dr.davidcastano" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
       <a href="mailto:dcastanosorio87@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
     </div>
-    <nav class="site-nav">
-      <input type="checkbox" id="nav-trigger" class="nav-trigger">
-      <label for="nav-trigger" class="menu-icon">
-        <svg viewBox="0 0 18 15" width="28px" height="25px">
-          <!-- SVG content here -->
-        </svg>
-      </label>
-      <div class="trigger">
-        <a class="page-link" href="{{ site.baseurl }}/posts/summary-of-dr-castano-experience.html">Dr. Castaño</a>
-        <a class="page-link" href="{{ site.baseurl }}/posts/services.html">Services</a>
-        <a class="page-link" href="#services-panel">More Services</a>
-      </div>
-    </nav>
   </div>
-  <div style="content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
 </header>
