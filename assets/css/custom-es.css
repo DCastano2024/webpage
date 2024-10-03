@@ -670,6 +670,74 @@ h2 {
     margin: 10px 0;
   }
 }
+/* Header Styling */
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  z-index: 2; /* Ensure it stays above the overlay */
+}
+
+.header-links {
+  display: flex;
+  gap: 20px; /* Space between header links */
+}
+
+.header-link {
+  color: #fff; /* White color for visibility */
+  text-decoration: none;
+  padding: 8px 12px; /* Padding around links */
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+.header-link:hover {
+  background-color: #444; /* Darken background on hover */
+  color: #fff; /* Text color on hover */
+}
+
+.language-switcher {
+  display: flex;
+  gap: 10px; /* Space between language links */
+  align-items: center;
+  color: #fff; /* White text */
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px; /* Space between social icons */
+  font-size: 1.5em; /* Default icon size */
+  z-index: 2; /* Ensure it stays above the overlay */
+}
+
+.social-icons a {
+  color: inherit; /* Inherit color from parent */
+  transition: transform 0.2s;
+}
+
+.social-icons a:hover {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Mobile Styling */
+@media (max-width: 768px) {
+  .header-top {
+    flex-direction: column;
+    align-items: center; /* Center align items */
+  }
+
+  .header-links {
+    justify-content: center;
+    margin: 10px 0;
+  }
+
+  .social-icons {
+    font-size: 1.2em; /* Smaller icon size on mobile */
+    justify-content: center;
+    margin: 10px 0;
+  }
+}
+
 
 
 
